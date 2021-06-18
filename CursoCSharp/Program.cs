@@ -59,12 +59,21 @@ namespace CursoCSharp {
 
                 //coleções
                 {" Programa - Exemplo array   ", Array1.Executar}, 
-              //{" Programa - Exemplo array   ", ColecoesList.Executar}, 
-              //{" Programa - Exemplo array   ", ColecoesArrayList.Executar}, 
-              //{" Programa - Exemplo array   ", ColecoesSet.Executar}, 
-              //{" Programa - Exemplo array   ", ColecoesQueue.Executar}, 
-              //{" Programa - Exemplo array   ", Igualdade.Executar}, 
-              //{" Programa - Exemplo array   ", ColecoesStack.Executar}, 
+                //{" Programa - Exemplo array   ", ColecoesList.Executar}, 
+                //{" Programa - Exemplo ColecoesArrayList", ColecoesArrayList.Executar}, 
+                //{" Programa - Exemplo array   ", ColecoesSet.Executar}, 
+                //{" Programa - Exemplo array   ", ColecoesQueue.Executar}, 
+                //{" Programa - Exemplo array   ", Igualdade.Executar}, 
+                //{" Programa - Exemplo array   ", ColecoesStack.Executar}, 
+
+                //Orientação a Objetos
+                {" Programa - Exemplo Abstract   ", Abstract.Executar}, 
+                {" Programa - Exemplo Heranca   ", Heranca.Executar}, 
+                {" Programa - Exemplo Polimorfismo   ", Polimorfismo.Executar}, 
+                {" Programa - Exemplo Encapsulamento   ", Encapsulamento.Executar}, 
+                {" Programa - Exemplo Interface   ", Interface.Executar}, 
+                {" Programa - Exemplo Sealed   ", Sealed.Executar}, 
+                {" Programa - Exemplo ConstrutorThis   ", ConstrutorThis.Executar}, 
 
             }); 
             
