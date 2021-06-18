@@ -56,7 +56,15 @@ namespace CursoCSharp {
                 {" Programa - Readonly  ", Readonly.Executar},
                 {" Programa - Enumeracoes  ", Enumeracoes.Executar},
                 {" Programa - Exemplo Struct  ", ExemploStruct.Executar}, 
-                {" Programa - Exemplo array   ", ExeArray.Executar}, 
+
+                //coleções
+                {" Programa - Exemplo array   ", Array1.Executar}, 
+              //{" Programa - Exemplo array   ", ColecoesList.Executar}, 
+              //{" Programa - Exemplo array   ", ColecoesArrayList.Executar}, 
+              //{" Programa - Exemplo array   ", ColecoesSet.Executar}, 
+              //{" Programa - Exemplo array   ", ColecoesQueue.Executar}, 
+              //{" Programa - Exemplo array   ", Igualdade.Executar}, 
+              //{" Programa - Exemplo array   ", ColecoesStack.Executar}, 
 
             }); 
             

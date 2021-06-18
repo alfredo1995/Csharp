@@ -9,6 +9,7 @@ namespace CursoCSharp.Colecoes
         public static void Executar() {
             var livro = new Produto("Game of Throne", 49.9);
             
+            //HashSet não e indexada como o list (não aceita repetições )
             var carrinho = new HashSet<Produto>();
             carrinho.Add(livro);
 
@@ -19,6 +20,7 @@ namespace CursoCSharp.Colecoes
                 new Produto("Poster", 10)
             };
 
+            //UnionWith alterando o carrinho p/ ser uma uniao de um conjuto com uma lista
             carrinho.UnionWith(combo);
             Console.WriteLine(carrinho.Count);
             // carrinho.RemoveAt(3);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CursoCSharp.Colecoes
 {
-    class Array
+    class Array1
     {
         public static void Executar() {
             string[] alunos = new string[5];

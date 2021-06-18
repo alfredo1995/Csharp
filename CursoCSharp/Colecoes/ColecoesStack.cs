@@ -7,8 +7,10 @@ namespace CursoCSharp.Colecoes
     class ColecoesStack
     {
         public static void Executar() {
+            //var fila recebendo a instancia do Tipo string - Stack = fila
             var pilha = new Stack();
 
+            //fila.Peek( pegar o ultimo elemento p/ exibir no console)
             pilha.Push(3);
             pilha.Push("a");
             pilha.Push(true);
