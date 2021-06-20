@@ -1,3 +1,6 @@
+Capaz de desenvolver programas com a linguagem C#
+
+Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos!
 
 
 1) Subindo projeto p/ github
