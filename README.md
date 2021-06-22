@@ -41,7 +41,7 @@ E esse curso tem por objetivo apresentar a linguagem C# e os seus recursos e est
 
 
 
-2) Subir arquivos criados apos upado o projeto no githun
+2) Atualizando os arquivos do projeto no github
 
               - git status                                                   ->  ver alterações no projeto
               - git add .                                                    ->  adicionar as alterações no projeto
