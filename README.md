@@ -1,5 +1,3 @@
-Seja muito Bem Vindo C# Curso Completo: Do Básico ao Avançado!
-
 Capaz de desenvolver programas com a linguagem C#
 
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos!
