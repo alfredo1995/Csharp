@@ -1,8 +1,8 @@
+Seja muito Bem Vindo C# Curso Completo: Do Básico ao Avançado!
+
 Capaz de desenvolver programas com a linguagem C#
 
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos!
-
-Seja muito Bem Vindo C# Curso Completo: Do Básico ao Avançado!
 
 C# é uma linguagem moderna Orientada a Objetos que possui uma série de recursos fantásticos e é uma das melhores opções para se iniciar no mundo da programação. A linguagem C# faz parte do .NET framework desenvolvido pela Microsoft.
 
