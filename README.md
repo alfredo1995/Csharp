@@ -2,9 +2,6 @@ Capaz de desenvolver programas com a linguagem C#
 
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos!
 
-C# é uma linguagem moderna Orientada a Objetos que possui uma série de recursos fantásticos e é uma das melhores opções para se iniciar no mundo da programação. A linguagem C# faz parte do .NET framework desenvolvido pela Microsoft.
-
-
 E esse curso tem por objetivo apresentar a linguagem C# e os seus recursos e está dividido em 12 seções, quais sejam:
 
 
