@@ -5,7 +5,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 E esse curso tem por objetivo apresentar a linguagem C# e os seus recursos e está dividido em 12 seções, quais sejam:
 
 
-    1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework;
+    1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework; 
 
     2) Configuração do Ambiente - Os passos necessários para configurar o computador para executar o C#;
 
