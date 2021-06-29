@@ -39,7 +39,7 @@ E esse curso tem por objetivo apresentar a linguagem C# e os seus recursos e est
               - git remote add origin https://github.com/alfredo1995/2.git   ->  onde e o caminho do acesso ao github
               - git push -u origin main                                      ->  confirmando o push
 
-
+ 
 
 2) Atualizando os arquivos do projeto no github
 
