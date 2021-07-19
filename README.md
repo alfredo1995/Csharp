@@ -21,7 +21,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
     
       9) Exceções - Quando os erros ocorrem entram em cenas as exceções e as técnicas de tratamento de erro;
 
-     10) Explorando API - Aprenderemos a mexer com arquivos, datas e intervalos de datas;
+     10) Explorando API - Aprenderemos a mexer com arquivos, datas e intervalos de datas; 
 
      11) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;
       
