@@ -65,3 +65,43 @@ Comandos GIT's utilizados frequentemente
               - git revert 'número do hash'                                 -> desfazer os commits
               - git log -- oneline                                          -> número do hash
               - git merge <nome-da-branch>                                  -> mesclar as branches
+              
+              
+              
+Desenvolvimento de uma Task (historia) referente a Sprint
+
+roteiro de teste
+
+	descrever claramente o fluxo que vai ser desenvolvido
+	
+criar a branch 
+
+	Repos > New Branch 
+	feature/AG/ID-NomeDaHistoria
+
+visual studio
+	remotes > develop > 
+
+ 	git fetch
+   
+Seleciona a branch da feature criada anteriomente : terminal
+
+ 	git pull 
+
+Iniciar o desenvolvimento na nova branch
+
+	implementar o novo fluxo do roteiro de teste
+
+Primeiro requisito da Task 
+
+	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
+        Aquisição = vazio à SubStatus = Visita de Qualificação
+        Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
+	
+implementação do primeiro requisito > Back end > AtendimentoSocial.cs
+
+	if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
+        var aquisicoes = Aquisicoes?.Where(c => c.Excluido == false).ToList();
+        if (aquisicoes == null || aquisicoes.Count == 0)
+            return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel : SubStatusAtendimentoSocial.VisitaDeQualificacao;
+
