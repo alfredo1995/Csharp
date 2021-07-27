@@ -27,7 +27,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       
 <br>
 
-12) Subindo arquivos p/ um repositório no github
+Subindo arquivos p/ um repositório no github
 
               - git init                                                     ->  iniciar project no git
               - git status                                                   ->  ver as alterações no projeto
@@ -39,7 +39,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
               - git push -u origin main                                      ->  confirmando o push
 
 
-2) Atualizando arquivos existente de um repositório no github
+Atualizando arquivos existente de um repositório no github
 
               - git status                                                   ->  ver alterações na branch
               - git add .                                                    ->  adicionar as alterações no projeto
