@@ -67,7 +67,7 @@ Comandos GIT's utilizados frequentemente
               - git merge <nome-da-branch>                                  -> mesclar as branches
               
               
-<br><br>
+<br><br><br><br>
 
 Desenvolvimento de uma Task (historia) referente a Sprint
 
