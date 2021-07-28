@@ -69,10 +69,6 @@ Comandos GIT's utilizados frequentemente
               
 <br><br><br><br>
 
-Desenvolvimento de uma Task (historia) referente a Sprint
-
-<br><br>
-
 roteiro de teste
 
 	descrever claramente o fluxo que vai ser desenvolvido
@@ -82,8 +78,7 @@ criar a branch
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
 
-visual studio
-	remotes > develop > 
+visual studio	remotes > develop > 
 
  	git fetch
    
@@ -98,13 +93,87 @@ Iniciar o desenvolvimento na nova branch
 Primeiro requisito da Task 
 
 	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
-        Aquisição = vazio à SubStatus = Visita de Qualificação
-        Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
-	
+Aquisição = vazio à SubStatus = Visita de Qualificação
+Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
+
+Se HOUVER um processo de Aquisição (imóvel cadastrado) aberto:
+Aquisição ≠ vazio e StatusAquisicaoImovel = Interesse Manifestado (atualmente devolve EmAberto – substituir por Interesse Manifestado) à Substatus = Análise Documental
+Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação
+Aquisição ≠ vazio e StatusAquisicaoImovel   = Indicação Formalizada (atualmente “Formalizado indicação” substituir para "Indicação Formalizada") à Substatus = Estudos Técnicos
+Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
+Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Entregue à Substatus = Aprovação Caderno Imobiliário
+Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
+
+
 implementação do primeiro requisito > Back end > AtendimentoSocial.cs
 
-	if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
-        var aquisicoes = Aquisicoes?.Where(c => c.Excluido == false).ToList();
-        if (aquisicoes == null || aquisicoes.Count == 0)
-            return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel : SubStatusAtendimentoSocial.VisitaDeQualificacao;
+	
+	 if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
+
+                var aquisicoes = Aquisicoes?.Where(c => c.Excluido == false).ToList();
+
+                if (aquisicoes == null || aquisicoes.Count == 0)
+                {
+                    return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel : SubStatusAtendimentoSocial.VisitaDeQualificacao;
+                }
+
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.ManifestacaoDeInteresse)) return SubStatusAtendimentoSocial.AnaliseDocumental;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.AnaliseDocumentalConcluida)) return SubStatusAtendimentoSocial.FormalizacaoDaIndicacaoDoImovel;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.IndicacaoFormalizada)) return SubStatusAtendimentoSocial.EstudosTecnicos;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.EstudosTecnicosConcluido)) return SubStatusAtendimentoSocial.CadernoImobiliario;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoEntregue)) return SubStatusAtendimentoSocial.AprovacaoCadernoImobiliario;
+                if (!aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoAprovado)) return SubStatusAtendimentoSocial.ImovelEmNegociacao;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Adquirido)) return SubStatusAtendimentoSocial.Adquirido;
+                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Cancelado)) return SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel;
+
+                return null;
+	
+
+
+Segundo requisito da Task
+
+	StatusAquisicaoImovel  que devem ser criados:
+       	   Análise Documental
+     	   Estudos Técnicos
+      	   Caderno Imobiliário
+      	   Aprovação Caderno Imobiliário
+        StatusAquisicaoImovel  que serão alterados:
+           EmAberto = Manifestação de Interesse
+           EmNegociacao = Imóvel em Negociação
+
+Cenario 
+	Cenário: Usuário altera o status do Imóvel para Adquirido
+        Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Adquirido
+	Quando houver um ou mais imóveis cadastrados
+	Então o Status será alterado para Adquirido
+
+implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.cs
+	
+	StatusAquisicaoImovel.cs > adicionar nova propriedade AnaliseDocumental = 8 no Enum 
+	
+	namespace RENOVA.Geral.Dominio.Enumeradores
+        {
+
+        public enum StatusAquisicaoImovel  {
+          Ativo = 1,
+          Cancelado = 2,
+          Selecionado = 3,
+          ManifestacaooDeInteresse = 4,
+          Adquirido = 5,
+          FormalizadoIndicacao = 6,
+          ImovelEmNegociação = 7,
+          AnaliseDocumental = 8,
+          EstudosTecnicos = 9,
+          CadernoImobiliario = 10,
+          AprovaçãoCadernoImobiliario = 11,
+        }}
+
+
+
+
+git fetch 
+git status
+git add .
+git commit -m ""
+git push
 
