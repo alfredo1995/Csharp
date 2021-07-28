@@ -93,16 +93,16 @@ Iniciar o desenvolvimento na nova branch
 Primeiro requisito da Task 
 
 	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
-Aquisição = vazio à SubStatus = Visita de Qualificação
-Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
+	Aquisição = vazio à SubStatus = Visita de Qualificação
+	Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
 
-Se HOUVER um processo de Aquisição (imóvel cadastrado) aberto:
-Aquisição ≠ vazio e StatusAquisicaoImovel = Interesse Manifestado (atualmente devolve EmAberto – substituir por Interesse Manifestado) à Substatus = Análise Documental
-Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação
-Aquisição ≠ vazio e StatusAquisicaoImovel   = Indicação Formalizada (atualmente “Formalizado indicação” substituir para "Indicação Formalizada") à Substatus = Estudos Técnicos
-Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
-Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Entregue à Substatus = Aprovação Caderno Imobiliário
-Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
+	Se HOUVER um processo de Aquisição (imóvel cadastrado) aberto:
+	Aquisição ≠ vazio e StatusAquisicaoImovel = Interesse Manifestado (atualmente devolve EmAberto – substituir por Interesse Manifestado) à Substatus = Análise Documental
+	Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação
+	Aquisição ≠ vazio e StatusAquisicaoImovel   = Indicação Formalizada (atualmente “Formalizado indicação” substituir para "Indicação Formalizada") à Substatus = Estudos           Técnicos
+	Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
+	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Entregue à Substatus = Aprovação Caderno Imobiliário
+	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
 
 
 implementação do primeiro requisito > Back end > AtendimentoSocial.cs
@@ -142,6 +142,7 @@ Segundo requisito da Task
            EmNegociacao = Imóvel em Negociação
 
 Cenario 
+
 	Cenário: Usuário altera o status do Imóvel para Adquirido
         Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Adquirido
 	Quando houver um ou mais imóveis cadastrados
@@ -169,11 +170,11 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
         }}
 
 
+Subindo a branch 
 
-
-git fetch 
-git status
-git add .
-git commit -m ""
-git push
+	git fetch 
+	git status
+	git add .
+	git commit -m ""
+	git push
 
