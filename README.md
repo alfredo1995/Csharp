@@ -49,8 +49,8 @@ Atualizando arquivos existente de um repositório no github
 
 Comandos GIT's utilizados frequentemente
 
-              -git config --global user.name "alfredo1995"  
-              -git config --global user.email "alfredogomes1995@gmail.com" 
+              - git config --global user.name "alfredo1995"  
+              - git config --global user.email "alfredogomes1995@gmail.com" 
               - git clone <https://nome-do-link>                            -> baixar o código-fonte existente de um repositório
               - git branch <nome-do-branch>                                 -> criar, listar e excluir branches
               - git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
