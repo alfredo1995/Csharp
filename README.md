@@ -71,7 +71,58 @@ Comandos GIT's utilizados frequentemente
 
 roteiro de teste
 
-	descrever claramente o fluxo que vai ser desenvolvido
+	Feature: #94 Revisão da regra de negócio do "SubStatusAtendimentoSocial"
+
+	Cenário: Usuário cadastra um novo atendimento social 
+	Dado que o usuário altera o status para EmAtendimento
+	Quando não houver um imóvel cadastrado
+	Então o SubStatus será alterado para Visita de Qualificação
+
+	Cenário: Usuário seleciona o campo de Interesse Manifestado
+	Dado que o usuário marque a opção Interesse Manifestado
+	Quando não houver um imóvel cadastrado
+	Então o SubStatus será alterado para Manifestação de Interesse
+
+	Cenário: Usuário altera o status do Imóvel para Interesse Manifestado
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Interesse Manifestado
+	Quando houver um ou mais imóveis cadastrados
+	Então o SubStatus será alterado para Analise Documental
+
+	Cenário: Usuário altera o status do Imóvel para Analise Documental Concluída
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Analise Documental Concluída
+	Quando houver um ou mais imóveis cadastrados
+	Então SubStatus será alterado para Formalização de Indicação
+
+	Cenário: Usuário altera o status do Imóvel para Formalização de Indicação
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Formalização de Indicação
+	Quando houver um ou mais imóveis cadastrados
+	Então SubStatus será alterado para Estudos Técnicos
+
+	Cenário: Usuário altera o status do Imóvel para Estudos Técnicos Concluídos
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Estudos Técnicos Concluídos
+	Quando houver um ou mais imóveis cadastrados
+	Então SubStatus será alterado para Caderno Imobiliário
+
+	Cenário: Usuário altera o status do Imóvel para Caderno Entregue
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Caderno Entregue
+	Quando houver um ou mais imóveis cadastrados
+	Então SubStatus será alterado para Aprovação Caderno Imobiliário
+
+	Cenário: Usuário altera o status do Imóvel para Caderno Aprovado
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Caderno Aprovado
+	Quando houver um ou mais imóveis cadastrados
+	Então SubStatus será alterado para Imóvel em Negociação
+
+	Cenário: Usuário altera o status do Imóvel para Adquirido
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Adquirido
+	Quando houver um ou mais imóveis cadastrados
+	Então o Status será alterado para Adquirido
+
+	Cenário: Usuário altera o status do Imóvel para Cancelado
+	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Cancelado
+	Quando houver um ou mais imóveis cadastrados
+	Então o Status será alterado para Manifestação de Interesse
+
 	
 criar a branch 
 
@@ -140,13 +191,6 @@ Segundo requisito da Task
         StatusAquisicaoImovel  que serão alterados:
            EmAberto = Manifestação de Interesse
            EmNegociacao = Imóvel em Negociação
-
-Cenario 
-
-	Cenário: Usuário altera o status do Imóvel para Adquirido
-        Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Adquirido
-	Quando houver um ou mais imóveis cadastrados
-	Então o Status será alterado para Adquirido
 
 implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.cs
 	
