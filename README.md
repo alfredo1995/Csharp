@@ -3,7 +3,7 @@ Capaz de desenvolver programas com a linguagem C#
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos dividos em 11 seções, quais sejam:
 
 
-     1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework; 
+     1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework;  
 
      2) Configuração do Ambiente - Os passos necessários para configurar o computador para executar o C#;
 
