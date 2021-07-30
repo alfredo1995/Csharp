@@ -222,3 +222,32 @@ Subindo a branch
 	git commit -m ""
 	git push
 
+................................................................
+
+
+alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações
+puxando a branch
+	
+	git fetch 
+	git pull
+	
+
+criar as propriedades (campos ) 
+
+	na entidade AtendimentoSocial.cs
+	objeto no response 
+	objeto na requeste
+	objeto no historico
+
+	update-database
+
+subindo a alterações
+	
+	
+	git status 
+	git merge 
+	git commit "fasdfa"
+        git push
+	
+
+
