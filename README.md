@@ -69,6 +69,9 @@ Comandos GIT's utilizados frequentemente
               
 <br><br><br><br>
 
+
+arrumar a indentação :  SHIFT + ALT + F  ou CTRL + K + D
+
 roteiro de teste
 
 	Feature: #94 Revisão da regra de negócio do "SubStatusAtendimentoSocial"
