@@ -72,61 +72,72 @@ Comandos GIT's utilizados frequentemente
 
 arrumar a indentação :  SHIFT + ALT + F  ou CTRL + K + D
 
+Ambientação para desenvolvimento .net / angular 
+
+	1) clonar projetos Back e Front >
+		Azure DevOps> Repos > Clonar ( back e front ) 
+		pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
+	2) baixar depedencia do Front end Packages
+		Cola depedencia > dentro da pasta front clonada
+
+	3) inicialização do front end > 
+		vs code> terminal : npm start
+
+	4) Configuração do back end >
+		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
+		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
+		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
+		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel
+		Limpar solução > ctrl + shift + b = copilar 
+
+	5) Conexão com o banco de dados >
+		Azure DevOps > Dowloado do banco de dados Renova
+		SQL Server > Nome do servidor: (localdb)\MSSQLLocalDB > autenticação windows
+		botao direito em cima do "banco de dados" > importar banco SQL Renova
+		Conexão com a Conecte string > web.config > "nome da string de conexao"
+
+	6) Inicialização do back end >
+		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
+		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
+		terminal nuget > Update-Database -Verbose -force 
+		Depuração : shift + f5
+
+
 roteiro de teste
 
-	Feature: #94 Revisão da regra de negócio do "SubStatusAtendimentoSocial"
+	Feature: #105 Relatório Planejamento Social
 
-	Cenário: Usuário cadastra um novo atendimento social 
-	Dado que o usuário altera o status para EmAtendimento
-	Quando não houver um imóvel cadastrado
-	Então o SubStatus será alterado para Visita de Qualificação
+	Cenário: Usuário acessa o menu de Relatórios e vizualiza a opção Relatório Planejamento Social
+	Dado que o usuário acesse o menu de Relatórios
+	Quando o usuário clicar na opção Relatórios
+	Então deverá ser mostrado a opção de Relatório Planejamento Social.
 
-	Cenário: Usuário seleciona o campo de Interesse Manifestado
-	Dado que o usuário marque a opção Interesse Manifestado
-	Quando não houver um imóvel cadastrado
-	Então o SubStatus será alterado para Manifestação de Interesse
+	Cenário: Usuário acessa o Relatório Planejamento Social e vizualiza as informações listadas
+	Dado que o usuário acesse o Relatório de Planejamento Social
+	Quando o usuário clicar na opção o Relatório de Planejamento Social
+	Então deverá ser listado todas as informções do Planejamento Social
 
-	Cenário: Usuário altera o status do Imóvel para Interesse Manifestado
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Interesse Manifestado
-	Quando houver um ou mais imóveis cadastrados
-	Então o SubStatus será alterado para Analise Documental
+	Cenário: Usuário tenta editar um campo do Relatório Planejamento Social
+	Dado que o usuário tente editar algum campo do Relatório Planejamento Social
+	Quando o usuário tentar editar algum campo do Relatório
+	Então o campo não estará disponível para edição, somente visualização.
 
-	Cenário: Usuário altera o status do Imóvel para Analise Documental Concluída
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Analise Documental Concluída
-	Quando houver um ou mais imóveis cadastrados
-	Então SubStatus será alterado para Formalização de Indicação
+	Cenário: Usuário exporta as informações do relatório do planejamento social para a planilha do excel
+	Dado que o usuário acesse o relatório do planejamento social
+	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
+	Então será exibida uma mensagem de sucesso e os dados serão exportados.
 
-	Cenário: Usuário altera o status do Imóvel para Formalização de Indicação
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Formalização de Indicação
-	Quando houver um ou mais imóveis cadastrados
-	Então SubStatus será alterado para Estudos Técnicos
+	Cenário: Erro ao carregar dados do relatório Planejamento Social
+	Dado que o usuário acesse o relatório do Planejamento social
+	Quando o usuário clicar na opção o Relatório de Planejamento Social
+	Então será exibida uma mensagem de erro e não serão exibidas as informações.
 
-	Cenário: Usuário altera o status do Imóvel para Estudos Técnicos Concluídos
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Estudos Técnicos Concluídos
-	Quando houver um ou mais imóveis cadastrados
-	Então SubStatus será alterado para Caderno Imobiliário
+	Cenário: Erro ao exportar dados
+	Dado que o usuário tente realizar a exportação dos dados
+	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
+	Então será exibida uma mensagem de erro e os dados não serão exportados.
 
-	Cenário: Usuário altera o status do Imóvel para Caderno Entregue
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Caderno Entregue
-	Quando houver um ou mais imóveis cadastrados
-	Então SubStatus será alterado para Aprovação Caderno Imobiliário
 
-	Cenário: Usuário altera o status do Imóvel para Caderno Aprovado
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Caderno Aprovado
-	Quando houver um ou mais imóveis cadastrados
-	Então SubStatus será alterado para Imóvel em Negociação
-
-	Cenário: Usuário altera o status do Imóvel para Adquirido
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Adquirido
-	Quando houver um ou mais imóveis cadastrados
-	Então o Status será alterado para Adquirido
-
-	Cenário: Usuário altera o status do Imóvel para Cancelado
-	Dado que o usuario realize a alteração do status do imóvel na aba Familiar Imóveis para Cancelado
-	Quando houver um ou mais imóveis cadastrados
-	Então o Status será alterado para Manifestação de Interesse
-
-	
 criar a branch 
 
 	Repos > New Branch 
