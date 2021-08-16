@@ -269,7 +269,7 @@ subindo a alterações
 	
 	git status 
 	git merge 
-	git commit "fasdfa"
+	git commit "descriçao"
         git push
 	
 
