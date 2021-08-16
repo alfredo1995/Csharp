@@ -65,6 +65,8 @@ Comandos GIT's utilizados frequentemente
               - git revert 'número do hash'                                 -> desfazer os commits
               - git log -- oneline                                          -> número do hash
               - git merge <nome-da-branch>                                  -> mesclar as branches
+	      - cd NomeDaPasta                                              -> cd acessa a pasta
+	      - .. 							    -> dois pontos volta a pasta
              
 arrumar a indentação vs code e vs
 
