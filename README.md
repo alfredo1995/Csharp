@@ -134,7 +134,7 @@ subindo as alterações
 	
 	git status 
 	git merge 
-	git commit "fasdfa"
+	git commit "descricao"
         git push
 	
 <br><br><br>
