@@ -1,6 +1,6 @@
 Capaz de desenvolver programas com a linguagem C#
 
-Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos dividos em 11 seções, quais sejam:
+Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos dividos em 11 seções
 
 
      1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework;  
@@ -66,7 +66,7 @@ Comandos GIT's utilizados frequentemente
               - git log -- oneline                                          -> número do hash
               - git merge <nome-da-branch>                                  -> mesclar as branches
              
-arrumar a indentação vs code e vs :
+arrumar a indentação vs code e vs
 
 	      SHIFT + ALT + F  ou CTRL + K + D
               
@@ -104,7 +104,7 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
 <br><br><br>
 
-criar a branch 
+criando branch 
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
