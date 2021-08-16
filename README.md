@@ -103,7 +103,44 @@ Configuração do ambiente de desenvolvimento .net / angular
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
 
-<br><br><br><br>
+<br><br><br>
+
+criar a branch 
+
+	Repos > New Branch 
+	feature/AG/ID-NomeDaHistoria
+
+visual studio	remotes > develop > 
+
+ 	git fetch
+   
+Seleciona a branch da feature criada anteriomente : terminal
+
+ 	git pull 
+
+Subindo a branch 
+
+	git fetch 
+	git status
+	git add .
+	git commit -m ""
+	git push
+
+alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações da nova 
+	
+	git fetch 
+	git pull
+
+subindo as alterações
+	
+	git status 
+	git merge 
+	git commit "fasdfa"
+        git push
+	
+<br><br><br>
+
+
 
 Exemplo de roteiro de teste
 
@@ -138,42 +175,7 @@ Exemplo de roteiro de teste
 	Dado que o usuário tente realizar a exportação dos dados
 	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
 	Então será exibida uma mensagem de erro e os dados não serão exportados.
-
-<br><br><br>
-
-criar a branch 
-
-	Repos > New Branch 
-	feature/AG/ID-NomeDaHistoria
-
-visual studio	remotes > develop > 
-
- 	git fetch
-   
-Seleciona a branch da feature criada anteriomente : terminal
-
- 	git pull 
-
-Subindo a branch 
-
-	git fetch 
-	git status
-	git add .
-	git commit -m ""
-	git push
-
-alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações da nova 
 	
-	git fetch 
-	git pull
-
-
-
-<br><br><br>
-
-
-
-
 Exercitando a logica para entendimento dos requisito da Task 
 
 	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
@@ -265,7 +267,6 @@ criar as propriedades (campos )
 	update-database
 
 subindo a alterações
-	
 	
 	git status 
 	git merge 
