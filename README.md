@@ -72,7 +72,7 @@ arrumar a indentação vs code e vs :
               
 <br><br><br>
 
-Configuração do ambiente de desenvolvimento .net Core 5
+Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
 	1) clonar projetos Back e Front >
 		Azure DevOps> Repos > Clonar ( back e front ) 
