@@ -70,10 +70,9 @@ arrumar a indentação vs code e vs :
 
 	      SHIFT + ALT + F  ou CTRL + K + D
               
-<br><br><br><br>
+<br><br><br>
 
-
-Configuração do ambiente de desenvolvimento .net / angular 
+Configuração do ambiente de desenvolvimento .net Core 5
 
 	1) clonar projetos Back e Front >
 		Azure DevOps> Repos > Clonar ( back e front ) 
