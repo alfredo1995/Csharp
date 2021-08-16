@@ -49,8 +49,8 @@ Atualizando arquivos existente de um repositório no github
 
 Comandos GIT's utilizados frequentemente
 
-              - git config --global user.name "alfredo1995"  
-              - git config --global user.email "alfredogomes1995@gmail.com" 
+              - git config --global user.name "alfredo1995"  	      	    -> configurando o usuario do git
+              - git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
               - git clone <https://nome-do-link>                            -> baixar o código-fonte existente de um repositório
               - git branch <nome-do-branch>                                 -> criar, listar e excluir branches
               - git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
@@ -65,18 +65,19 @@ Comandos GIT's utilizados frequentemente
               - git revert 'número do hash'                                 -> desfazer os commits
               - git log -- oneline                                          -> número do hash
               - git merge <nome-da-branch>                                  -> mesclar as branches
-              
+             
+arrumar a indentação vs code e vs :
+
+	      SHIFT + ALT + F  ou CTRL + K + D
               
 <br><br><br><br>
 
 
-arrumar a indentação :  SHIFT + ALT + F  ou CTRL + K + D
-
-Ambientação para desenvolvimento .net / angular 
+Configuração do ambiente de desenvolvimento .net / angular 
 
 	1) clonar projetos Back e Front >
 		Azure DevOps> Repos > Clonar ( back e front ) 
-		pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
+		Criar pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
 	2) baixar depedencia do Front end Packages
 		Cola depedencia > dentro da pasta front clonada
 
@@ -102,8 +103,9 @@ Ambientação para desenvolvimento .net / angular
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
 
+<br><br><br><br>
 
-roteiro de teste
+Exemplo de roteiro de teste
 
 	Feature: #105 Relatório Planejamento Social
 
@@ -137,6 +139,7 @@ roteiro de teste
 	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
 	Então será exibida uma mensagem de erro e os dados não serão exportados.
 
+<br><br><br>
 
 criar a branch 
 
@@ -151,11 +154,27 @@ Seleciona a branch da feature criada anteriomente : terminal
 
  	git pull 
 
-Iniciar o desenvolvimento na nova branch
+Subindo a branch 
 
-	implementar o novo fluxo do roteiro de teste
+	git fetch 
+	git status
+	git add .
+	git commit -m ""
+	git push
 
-Primeiro requisito da Task 
+alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações da nova 
+	
+	git fetch 
+	git pull
+
+
+
+<br><br><br>
+
+
+
+
+Exercitando a logica para entendimento dos requisito da Task 
 
 	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
 	Aquisição = vazio à SubStatus = Visita de Qualificação
@@ -170,7 +189,7 @@ Primeiro requisito da Task
 	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
 
 
-implementação do primeiro requisito > Back end > AtendimentoSocial.cs
+implementação o requisito > Back end > AtendimentoSocial.cs
 
 	
 	 if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
@@ -193,8 +212,6 @@ implementação do primeiro requisito > Back end > AtendimentoSocial.cs
 
                 return null;
 	
-
-
 Segundo requisito da Task
 
 	StatusAquisicaoImovel  que devem ser criados:
@@ -236,15 +253,7 @@ Subindo a branch
 	git commit -m ""
 	git push
 
-................................................................
-
-
-alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações
-puxando a branch
-	
-	git fetch 
-	git pull
-	
+<br><br><br>
 
 criar as propriedades (campos ) 
 
