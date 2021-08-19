@@ -72,39 +72,7 @@ arrumar a indentação vs code e vs
 
 	      SHIFT + ALT + F  ou CTRL + K + D
               
-<br><br><br>
-
-Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
-
-	1) clonar projetos Back e Front >
-		Azure DevOps> Repos > Clonar ( back e front ) 
-		Criar pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
-	2) baixar depedencia do Front end Packages
-		Cola depedencia > dentro da pasta front clonada
-
-	3) inicialização do front end > 
-		vs code> terminal : npm start
-
-	4) Configuração do back end >
-		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
-		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
-		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
-		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel
-		Limpar solução > ctrl + shift + b = copilar 
-
-	5) Conexão com o banco de dados >
-		Azure DevOps > Dowloado do banco de dados Renova
-		SQL Server > Nome do servidor: (localdb)\MSSQLLocalDB > autenticação windows
-		botao direito em cima do "banco de dados" > importar banco SQL Renova
-		Conexão com a Conecte string > web.config > "nome da string de conexao"
-
-	6) Inicialização do back end >
-		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
-		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
-		terminal nuget > Update-Database -Verbose -force 
-		Depuração : shift + f5
-
-<br><br><br>
+	      
 
 criando branch 
 
@@ -140,19 +108,96 @@ subindo as alterações
 	git commit "descricao"
         git push
 	
+	
+	      
+	      
 <br><br><br>
 
 
 
-Subindo a branch 
+Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
+	1) clonar projetos Back e Front >
+		Azure DevOps> Repos > Clonar ( back e front ) 
+		Criar pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
+	2) baixar depedencia do Front end Packages
+		Cola depedencia > dentro da pasta front clonada
+
+	3) inicialização do front end > 
+		vs code> terminal : npm start
+
+	4) Configuração do back end >
+		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
+		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
+		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
+		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel
+		Limpar solução > ctrl + shift + b = copilar 
+
+	5) Conexão com o banco de dados >
+		Azure DevOps > Dowloado do banco de dados Renova
+		SQL Server > Nome do servidor: (localdb)\MSSQLLocalDB > autenticação windows
+		botao direito em cima do "banco de dados" > importar banco SQL Renova
+		Conexão com a Conecte string > web.config > "nome da string de conexao"
+
+	6) Inicialização do back end >
+		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
+		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
+		terminal nuget > Update-Database -Verbose -force 
+		Depuração : shift + f5
+		
+<br><br><br>
+
+
+
+
+Etapas de desenvolvimento de task
+
+	desenvolvendo as tarefas da sprint
+	
+criar roteiro de teste
+	
+	exemplo de roteiro de teste
+
+atualizar a develop no Azure DevOps com o roteiro de teste criado
+	
+	validação do roteiro de teste
+	
+criar a branch
+
+	Repos > New Branch 
+	feature/AG/ID-NomeDaHistoria
+	seleciona a branch a ser criada na develop
+	
+Subindo a branch
+	
 	git fetch 
-	git status
-	git add .
-	git commit -m ""
-	git push
+	git pull
+	
+selecionei a feature no visual studio e o code
 
+	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
+	
 <br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 criar as propriedades (campos ) 
 
