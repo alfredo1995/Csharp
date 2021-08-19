@@ -178,6 +178,13 @@ Subindo a branch
 selecionei a feature no visual studio e o code
 
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
+
+codar implementando os requisitos da historia na sprint
+
+	fazer a inclução das propriedades (campos ) na entidade NomeDaEntidade.cs ... e
+	adicionar objeto no response da entidade
+	adicionar objeto no request da entidade
+	adicionar objeto no historico da entidade
 	
 <br><br><br>
 
