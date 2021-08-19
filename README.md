@@ -236,37 +236,30 @@ subindo a alterações
 
 Exemplo de roteiro de teste
 
-	Feature: #105 Relatório Planejamento Social
+	Feature: #54 - Readequação da rotina Controle de Obra
 
-	Cenário: Usuário acessa o menu de Relatórios e vizualiza a opção Relatório Planejamento Social
-	Dado que o usuário acesse o menu de Relatórios
-	Quando o usuário clicar na opção Relatórios
-	Então deverá ser mostrado a opção de Relatório Planejamento Social.
+	Sucesso:
+	Cenário: Usuário acessa as telas Execução das Edificações de Bento
+	Dado que o Usuário acesse a tela Execução das Edificações de Bento
+	Quando o usuário acessar a tela Execução das Edificações de Bento
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Usuário acessa o Relatório Planejamento Social e vizualiza as informações listadas
-	Dado que o usuário acesse o Relatório de Planejamento Social
-	Quando o usuário clicar na opção o Relatório de Planejamento Social
-	Então deverá ser listado todas as informções do Planejamento Social
+	Cenário: Usuário acessa a tela Execução das Edificações do Familiar
+	Dado que o Usuário acesse a tela Execução das Edificações de Familiar
+	Quando o usuário acessar a tela Execução das Edificações de Familiar
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Usuário tenta editar um campo do Relatório Planejamento Social
-	Dado que o usuário tente editar algum campo do Relatório Planejamento Social
-	Quando o usuário tentar editar algum campo do Relatório
-	Então o campo não estará disponível para edição, somente visualização.
+	Cenário: Usuário acessa a tela Execução das Edificações dos Gesteira
+	Dado que o Usuário acesse a tela Execução das Edificações de Gesteira
+	Quando o usuário acessar a tela Execução das Edificações de Gesteira
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Usuário exporta as informações do relatório do planejamento social para a planilha do excel
-	Dado que o usuário acesse o relatório do planejamento social
-	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
-	Então será exibida uma mensagem de sucesso e os dados serão exportados.
+	Cenário: Usuário acessa a tela Execução das Edificações do Paracatu
+	Dado que o Usuário acesse a tela Execução das Edificações de Paracatu
+	Quando o usuário acessar a tela Execução das Edificações de Paracatu
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Erro ao carregar dados do relatório Planejamento Social
-	Dado que o usuário acesse o relatório do Planejamento social
-	Quando o usuário clicar na opção o Relatório de Planejamento Social
-	Então será exibida uma mensagem de erro e não serão exibidas as informações.
 
-	Cenário: Erro ao exportar dados
-	Dado que o usuário tente realizar a exportação dos dados
-	Quando o usuário clicar para exportar o relatorio do planejamento social para a planilha do excel
-	Então será exibida uma mensagem de erro e os dados não serão exportados.
 	
 Exercitando a logica para entendimento dos requisito da Task 
 
