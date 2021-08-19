@@ -110,8 +110,9 @@ criando branch
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
+	seleciona a branch a ser criada na develop
 
-visual studio	remotes > develop > 
+visual studio e code remotes > develop > para branch criad > feature/AG/ID-NomeDaHistoria
 
  	git fetch
    
@@ -140,6 +141,38 @@ subindo as alterações
         git push
 	
 <br><br><br>
+
+
+
+Subindo a branch 
+
+	git fetch 
+	git status
+	git add .
+	git commit -m ""
+	git push
+
+<br><br><br>
+
+criar as propriedades (campos ) 
+
+	na entidade AtendimentoSocial.cs
+	objeto no response 
+	objeto na requeste
+	objeto no historico
+
+	update-database
+
+subindo a alterações
+	
+	git status 
+	git merge 
+	git commit "descriçao"
+        git push
+	
+	
+	
+	
 
 
 
@@ -193,7 +226,7 @@ Exercitando a logica para entendimento dos requisito da Task
 
 
 implementação o requisito > Back end > AtendimentoSocial.cs
-
+ta ouvindo agora ?
 	
 	 if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
 
@@ -246,33 +279,4 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           CadernoImobiliario = 10,
           AprovaçãoCadernoImobiliario = 11,
         }}
-
-
-Subindo a branch 
-
-	git fetch 
-	git status
-	git add .
-	git commit -m ""
-	git push
-
-<br><br><br>
-
-criar as propriedades (campos ) 
-
-	na entidade AtendimentoSocial.cs
-	objeto no response 
-	objeto na requeste
-	objeto no historico
-
-	update-database
-
-subindo a alterações
-	
-	git status 
-	git merge 
-	git commit "descriçao"
-        git push
-	
-
 
