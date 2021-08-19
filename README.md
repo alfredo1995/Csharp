@@ -116,7 +116,6 @@ subindo as alterações
 <br><br><br>
 
 
-
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
 	1) clonar projetos Back e Front >
@@ -146,10 +145,11 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
-		
+
+
+
+
 <br><br><br>
-
-
 
 
 Etapas de desenvolvimento de task
@@ -181,31 +181,35 @@ selecionei a feature no visual studio e o code
 
 codar implementando os requisitos da historia na sprint
 
+criar as propriedades (campos ) 
+
+	na entidade AtendimentoSocial.cs
+	objeto no response 
+	objeto na requeste
+	objeto no historico
+
+	update-database
+
 	fazer a inclução das propriedades (campos ) na entidade NomeDaEntidade.cs ... e
 	adicionar objeto no response da entidade
 	adicionar objeto no request da entidade
 	adicionar objeto no historico da entidade
 	
+	update-database
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 criar as propriedades (campos ) 
@@ -266,41 +270,39 @@ Exemplo de roteiro de teste
 	
 Exercitando a logica para entendimento dos requisito da Task 
 
-	Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
-	Aquisição = vazio à SubStatus = Visita de Qualificação
-	Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
+		Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
+		Aquisição = vazio à SubStatus = Visita de Qualificação
+		Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
 
 	Se HOUVER um processo de Aquisição (imóvel cadastrado) aberto:
-	Aquisição ≠ vazio e StatusAquisicaoImovel = Interesse Manifestado (atualmente devolve EmAberto – substituir por Interesse Manifestado) à Substatus = Análise Documental
-	Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação
-	Aquisição ≠ vazio e StatusAquisicaoImovel   = Indicação Formalizada (atualmente “Formalizado indicação” substituir para "Indicação Formalizada") à Substatus = Estudos           Técnicos
+	
+	Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação	
 	Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
 	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Entregue à Substatus = Aprovação Caderno Imobiliário
 	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
 
 
 implementação o requisito > Back end > AtendimentoSocial.cs
-ta ouvindo agora ?
 	
-	 if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
+	        if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
 
                 var aquisicoes = Aquisicoes?.Where(c => c.Excluido == false).ToList();
 
                 if (aquisicoes == null || aquisicoes.Count == 0)
                 {
-                    return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel : SubStatusAtendimentoSocial.VisitaDeQualificacao;
+                    return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel :   
+		    SubStatusAtendimentoSocial.VisitaDeQualificacao;
                 }
 
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.ManifestacaoDeInteresse)) return SubStatusAtendimentoSocial.AnaliseDocumental;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.AnaliseDocumentalConcluida)) return SubStatusAtendimentoSocial.FormalizacaoDaIndicacaoDoImovel;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.IndicacaoFormalizada)) return SubStatusAtendimentoSocial.EstudosTecnicos;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.EstudosTecnicosConcluido)) return SubStatusAtendimentoSocial.CadernoImobiliario;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoEntregue)) return SubStatusAtendimentoSocial.AprovacaoCadernoImobiliario;
-                if (!aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoAprovado)) return SubStatusAtendimentoSocial.ImovelEmNegociacao;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Adquirido)) return SubStatusAtendimentoSocial.Adquirido;
-                if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Cancelado)) return SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel;
+	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.AnaliseDocumentalConcluida)) return SubStatusAtendimentoSocial.FormalizacaoDaIndicacaoDoImovel;
+	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.EstudosTecnicosConcluido)) return SubStatusAtendimentoSocial.CadernoImobiliario;
+	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoEntregue)) return SubStatusAtendimentoSocial.AprovacaoCadernoImobiliario;
+	if (!aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoAprovado)) return SubStatusAtendimentoSocial.ImovelEmNegociacao;
+	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Adquirido)) return SubStatusAtendimentoSocial.Adquirido;
+	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Cancelado)) return SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel;
 
-                return null;
+	return null;
+	
 	
 Segundo requisito da Task
 
@@ -309,9 +311,6 @@ Segundo requisito da Task
      	   Estudos Técnicos
       	   Caderno Imobiliário
       	   Aprovação Caderno Imobiliário
-        StatusAquisicaoImovel  que serão alterados:
-           EmAberto = Manifestação de Interesse
-           EmNegociacao = Imóvel em Negociação
 
 implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.cs
 	
@@ -331,6 +330,6 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           AnaliseDocumental = 8,
           EstudosTecnicos = 9,
           CadernoImobiliario = 10,
-          AprovaçãoCadernoImobiliario = 11,
+         
         }}
 
