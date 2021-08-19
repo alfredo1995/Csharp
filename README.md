@@ -27,6 +27,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       
 <br>
 
+
 Subindo arquivos p/ um repositório no github
 
               - git init                                                     ->  iniciar project no git
@@ -70,23 +71,24 @@ Comandos GIT's utilizados frequentemente
              
 arrumar a indentação vs code e vs
 
-	      SHIFT + ALT + F  ou CTRL + K + D
+	      SHIFT + ALT + F ou CTRL + K + D
               
 	      
 
-criando branch 
+criar a branch
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
 	seleciona a branch a ser criada na develop
+	
+Subindo a branch
+	
+	git fetch 
+		
+selecionei a feature no visual studio e o code
 
-visual studio e code remotes > develop > para branch criad > feature/AG/ID-NomeDaHistoria
-
- 	git fetch
-   
-Seleciona a branch da feature criada anteriomente : terminal
-
- 	git pull 
+	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
+	git pull
 
 Subindo a branch 
 
