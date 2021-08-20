@@ -187,20 +187,16 @@ codar
 
 criar as propriedades (campos ) 
 
-	na entidade AtendimentoSocial.cs
-	objeto no response 
-	objeto na requeste
-	objeto no historico
-
-	update-database
-
-	fazer a inclução das propriedades (campos ) na entidade NomeDaEntidade.cs ... e
+	incluir as propriedades (campos ) na entidade NomeDaEntidade.cs ... e
 	adicionar objeto no response da entidade
 	adicionar objeto no request da entidade
 	adicionar objeto no historico da entidade
-	
-	update-database
 
+	update-database
+	
+exemplo ao criar as propriedades (campos ) 
+
+	
 
 subindo a alterações
 	
@@ -208,6 +204,8 @@ subindo a alterações
 	git merge 
 	git commit "descriçao"
         git push
+
+
 
 
 
