@@ -181,7 +181,9 @@ selecionei a feature no visual studio e o code
 
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
 
-codar implementando os requisitos da historia na sprint
+codar 
+
+	implementando os requisitos da historia na sprint
 
 criar as propriedades (campos ) 
 
