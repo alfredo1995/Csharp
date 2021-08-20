@@ -194,6 +194,8 @@ criar as propriedades (campos )
 	
 exemplo ao criar as propriedades (campos ) 
 
+	VisitasObra.cs | VisitasObraResponse.cs | VisitasObraRequest.cs
+	
         #region Feature 54
         public DateTime? Statu_Do_Processo { get; set; }
         public const bool Statu_Do_Processo_Obrigatorio = false;
