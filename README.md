@@ -110,8 +110,7 @@ subindo as alterações
 	git commit "descricao"
         git push
 	
-	
-	      
+  
 	      
 <br><br><br>
 
@@ -145,6 +144,9 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
+
+
+
 
 
 
@@ -198,7 +200,12 @@ criar as propriedades (campos )
 	update-database
 
 
-
+subindo a alterações
+	
+	git status 
+	git merge 
+	git commit "descriçao"
+        git push
 
 
 
@@ -210,27 +217,6 @@ criar as propriedades (campos )
 
 
 <br><br><br>
-
-
-criar as propriedades (campos ) 
-
-	na entidade AtendimentoSocial.cs
-	objeto no response 
-	objeto na requeste
-	objeto no historico
-
-	update-database
-
-subindo a alterações
-	
-	git status 
-	git merge 
-	git commit "descriçao"
-        git push
-	
-	
-	
-	
 
 
 
@@ -271,8 +257,6 @@ Exercitando a logica para entendimento dos requisito da Task
 	
 	Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação	
 	Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
-	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Entregue à Substatus = Aprovação Caderno Imobiliário
-	Aquisição ≠ vazio e StatusAquisicaoImovel   = Caderno Aprovado à Substatus = Imóvel em Negociação
 
 
 implementação o requisito > Back end > AtendimentoSocial.cs
@@ -289,8 +273,6 @@ implementação o requisito > Back end > AtendimentoSocial.cs
 
 	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.AnaliseDocumentalConcluida)) return SubStatusAtendimentoSocial.FormalizacaoDaIndicacaoDoImovel;
 	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.EstudosTecnicosConcluido)) return SubStatusAtendimentoSocial.CadernoImobiliario;
-	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoEntregue)) return SubStatusAtendimentoSocial.AprovacaoCadernoImobiliario;
-	if (!aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.CadernoAprovado)) return SubStatusAtendimentoSocial.ImovelEmNegociacao;
 	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Adquirido)) return SubStatusAtendimentoSocial.Adquirido;
 	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Cancelado)) return SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel;
 
@@ -309,8 +291,7 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
 	
 	StatusAquisicaoImovel.cs > adicionar nova propriedade AnaliseDocumental = 8 no Enum 
 	
-	namespace RENOVA.Geral.Dominio.Enumeradores
-        {
+	namespace RENOVA.Geral.Dominio.Enumeradores        {
 
         public enum StatusAquisicaoImovel  {
           Ativo = 1,
@@ -320,9 +301,5 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           Adquirido = 5,
           FormalizadoIndicacao = 6,
           ImovelEmNegociação = 7,
-          AnaliseDocumental = 8,
-          EstudosTecnicos = 9,
-          CadernoImobiliario = 10,
-         
-        }}
+          AnaliseDocumental = 8,                }}
 
