@@ -1,6 +1,6 @@
 Capaz de desenvolver programas com a linguagem C#
 
-Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos dividos em 11 seções
+Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos
 
 
      1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework;  
