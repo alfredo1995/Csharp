@@ -112,7 +112,7 @@ subindo as alterações
 	
   
 	      
-<br><br><br>
+<br><br>
 
 
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
@@ -144,8 +144,6 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
-
-
 
 
 
@@ -196,7 +194,15 @@ criar as propriedades (campos )
 	
 exemplo ao criar as propriedades (campos ) 
 
-	
+        #region Feature 54
+        public DateTime? Statu_Do_Processo { get; set; }
+        public const bool Statu_Do_Processo_Obrigatorio = false;
+
+        public Decimal? _do_avanço { get; set; }
+        public const bool _do_avanço_Obrigatorio = false;
+        public DateTime? Data_Prevista{ get; set; }
+        public const bool Data_Prevista_Obrigatorio = false;
+	#endregion Feature 54
 
 subindo a alterações
 	
