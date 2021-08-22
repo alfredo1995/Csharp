@@ -112,8 +112,7 @@ subindo as alterações
 	
   
 	      
-<br><br>
-
+<br>
 
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
@@ -146,11 +145,10 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		Depuração : shift + f5
 
 
-
-
-
-
 <br><br><br><br>
+
+
+
 
 
 Etapas de desenvolvimento de task
@@ -199,7 +197,7 @@ ExecucaoObraEdificacao.cs
 	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
 
-chamando o objeto no cronstrutor e injetando o objeto no response da entidade ExecucaoObraEdificacaoResponse.cs
+chamando o objeto no cronstrutor e injetando no response da entidade ExecucaoObraEdificacaoResponse.cs
 
 	//chamando o obj no construtor
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
@@ -213,35 +211,14 @@ chamando o objeto no resquest da entidade
 	
 	//chamando o parametro
 	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
-	instanciando objeto
+	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo_Id,
 
-criar as propriedades (campos ) 
 
-	incluir as propriedades (campos ) na entidade NomeDaEntidade.cs ... e
-	adicionar objeto no response da entidade
-	adicionar objeto no request da entidade
-	adicionar objeto no historico da entidade
-
-	update-database
-	
-exemplo ao criar as propriedades (campos ) 
-
-	VisitasObra.cs | VisitasObraResponse.cs | VisitasObraRequest.cs
-	
-        #region Feature 54
-        public DateTime? Statu_Do_Processo { get; set; }
-        public const bool Statu_Do_Processo_Obrigatorio = false;
-
-        public Decimal? _do_avanço { get; set; }
-        public const bool _do_avanço_Obrigatorio = false;
-        public DateTime? Data_Prevista{ get; set; }
-        public const bool Data_Prevista_Obrigatorio = false;
-	#endregion Feature 54
-	
 
 subindo a alterações
-	
+
+	Update-Database
 	git status 
 	git merge 
 	git commit "descriçao"
