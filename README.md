@@ -149,7 +149,8 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
 
 
-<br><br><br>
+
+<br><br><br><br>
 
 
 Etapas de desenvolvimento de task
@@ -237,6 +238,7 @@ exemplo ao criar as propriedades (campos )
         public DateTime? Data_Prevista{ get; set; }
         public const bool Data_Prevista_Obrigatorio = false;
 	#endregion Feature 54
+	
 
 subindo a alterações
 	
@@ -256,7 +258,7 @@ subindo a alterações
 
 
 
-<br><br><br>
+<br><br><br><br>
 
 
 
