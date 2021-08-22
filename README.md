@@ -179,9 +179,41 @@ selecionei a feature no visual studio e o code
 
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
 
-codar 
+requesito da task
 
-	implementando os requisitos da historia na sprint
+	Deverão ser incluídos os campos:
+	Contenção Lote
+	Status do processo
+	% do avanço (decimal)
+	Data Prevista (Date Time)
+	Data Programada/Realizada (Date Time)
+	ID Exclusivo do Project (int)
+
+implementando os requisitos da historia na sprint
+
+	criando o objeto em ExecucaoObraEdificacao.cs
+
+ExecucaoObraEdificacao.cs
+
+	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
+        public const bool status_do_processo_obrigatorio = false;
+
+chamando o objeto no cronstrutor e injetando o objeto no response da entidade ExecucaoObraEdificacaoResponse.cs
+
+	//chamando o obj no construtor
+ 	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
+        public ResponseEnum<StatusExecucaoObraEdificacao> Status_Do_Processo { get; set; }
+	
+	//injetando o obj response da entidade
+	Status_Do_Processo_Id = obj.Status_Do_Processo;
+        Status_Do_Processo = new ResponseEnum<StatusExecucaoObraEdificacao>(obj.Status_Do_Processo);
+
+chamando o objeto no resquest da entidade
+	
+	//chamando o parametro
+	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
+	instanciando objeto
+	Status_Do_Processo = this.Status_Do_Processo_Id,
 
 criar as propriedades (campos ) 
 
