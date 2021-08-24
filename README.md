@@ -192,12 +192,12 @@ implementando os requisitos da historia na sprint
 
 	criando o objeto em ExecucaoObraEdificacao.cs
 
-ExecucaoObraEdificacao.cs
+criar o objeto na entidade ExecucaoObraEdificacao.cs
 
 	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
 
-chamando o objeto no cronstrutor e injetando no response da entidade ExecucaoObraEdificacaoResponse.cs
+chamando a propriedade do objeto no cronstrutor e injetando no response da entidade ExecucaoObraEdificacaoResponse.cs
 
 	//chamando o obj no construtor
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
@@ -207,7 +207,7 @@ chamando o objeto no cronstrutor e injetando no response da entidade ExecucaoObr
 	Status_Do_Processo_Id = obj.Status_Do_Processo;
         Status_Do_Processo = new ResponseEnum<StatusExecucaoObraEdificacao>(obj.Status_Do_Processo);
 
-chamando o objeto no resquest da entidade
+chamando a propriedade do objeto no resquest da entidade
 	
 	//chamando o parametro
 	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
