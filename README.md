@@ -192,25 +192,48 @@ implementando os requisitos da historia na sprint
 
 	criando o objeto em ExecucaoObraEdificacao.cs
 
-criar o objeto na entidade ExecucaoObraEdificacao.cs
+criar a propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
 
 	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
 
-chamando a propriedade do objeto no cronstrutor e injetando no response da entidade ExecucaoObraEdificacaoResponse.cs
+chamando a propriedade do objeto(tipo enum) no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
 
-	//chamando o obj no construtor
+	//chamando a propriedade do obj no construtor ( fazendo build )
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
         public ResponseEnum<StatusExecucaoObraEdificacao> Status_Do_Processo { get; set; }
 	
-	//injetando o obj response da entidade
+	//injetando o obj response da entidade ( chamando build )
 	Status_Do_Processo_Id = obj.Status_Do_Processo;
         Status_Do_Processo = new ResponseEnum<StatusExecucaoObraEdificacao>(obj.Status_Do_Processo);
 
 chamando a propriedade do objeto no resquest da entidade
 	
 	//chamando o parametro
-	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
+	public int? Status_Do_Processo_Id { get; set; }
+	//instanciando objeto
+	Status_Do_Processo = this.Status_Do_Processo_Id,
+	
+	
+
+criar a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdificacao.cs
+
+	public int? Status_Do_Processo { get; set; }
+        public const bool status_do_processo_obrigatorio = false;
+
+chamando a propriedade do objeto(tipo enum(null))  no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
+
+	//chamando a propriedade do obj no construtor ( fazendo build )
+ 	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
+        public int? Status_Do_Processo { get; set; }
+	
+	//injetando o obj response da entidade ( chamando build )
+        Status_Do_Processo = obj.Status_Do_Processo;
+
+chamando a propriedade do objeto(tipo enum(null)) no resquest da entidade
+	
+	//chamando o parametro
+	public int? Status_Do_Processo_Id { get; set; }
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo_Id,
 
@@ -223,13 +246,6 @@ subindo a alterações
 	git merge 
 	git commit "descriçao"
         git push
-
-
-
-
-
-
-
 
 
 
