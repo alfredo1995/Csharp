@@ -237,7 +237,7 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	
 	//chamando o parametro
 	//instanciando objeto
-	Status_Do_Processo = this.Status_Do_Processo_Id,
+	Status_Do_Processo = this.Status_Do_Processo,
 
 
 
