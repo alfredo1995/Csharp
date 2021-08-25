@@ -238,6 +238,15 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	//chamando o parametro
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
+	
+	
+requisito de calculo do status (id) de cada objeto
+
+	% do avanço = 0 ("Não iniciado") 
+	% do avanço entre 1 e 99% ("Em andamento")
+	% do avanço = 100% ("Finalizado")
+
+implementando requisito de calculo no back end
 
 
 
