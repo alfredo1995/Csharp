@@ -192,12 +192,12 @@ implementando os requisitos da historia na sprint
 
 	criando o objeto em ExecucaoObraEdificacao.cs
 
-criar a propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
+criando a propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
 
 	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
 
-chamando a propriedade do objeto(tipo enum) no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
+setando a propriedade do objeto(tipo enum) no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
 
 	//chamando a propriedade do obj no construtor ( fazendo build )
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
@@ -207,7 +207,7 @@ chamando a propriedade do objeto(tipo enum) no construtor e injetando a propried
 	Status_Do_Processo_Id = obj.Status_Do_Processo;
         Status_Do_Processo = new ResponseEnum<StatusExecucaoObraEdificacao>(obj.Status_Do_Processo);
 
-chamando a propriedade do objeto no resquest da entidade
+setando a propriedade do objeto no resquest da entidade
 	
 	//chamando o parametro
 	public int? Status_Do_Processo_Id { get; set; }
@@ -216,12 +216,12 @@ chamando a propriedade do objeto no resquest da entidade
 	
 	
 
-criar a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdificacao.cs
+criando a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdificacao.cs
 
 	public int? Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
 
-chamando a propriedade do objeto(tipo enum(null))  no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
+setando a propriedade do objeto(tipo enum(null))  no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
 
 	//chamando a propriedade do obj no construtor ( fazendo build )
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
@@ -230,7 +230,7 @@ chamando a propriedade do objeto(tipo enum(null))  no construtor e injetando a p
 	//injetando o obj response da entidade ( chamando build )
         Status_Do_Processo = obj.Status_Do_Processo;
 
-chamando a propriedade do objeto(tipo enum(null)) no resquest da entidade
+setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	
 	//chamando o parametro
 	public int? Status_Do_Processo_Id { get; set; }
