@@ -215,7 +215,11 @@ setando a propriedade do objeto no resquest da entidade
 	Status_Do_Processo = this.Status_Do_Processo_Id,
 	
 	
+obs sobre a forma de criar e setar as propriendade do objeto nas entidades: 
 
+     quando o obejeto e do tipo enum, na hora de setar os atributos no response e request e obrigatorio passar o id 
+     quando o obejto  e do tipo int, na hora de setar os atributos no response e request apenas e necessario setar a propriedade direto, sem id
+     
 criando a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdificacao.cs
 
 	public int? Status_Do_Processo { get; set; }
@@ -275,11 +279,6 @@ Exemplo de roteiro de teste
 	Quando o usuário acessar a tela Execução das Edificações de Gesteira
 	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Usuário acessa a tela Execução das Edificações do Paracatu
-	Dado que o Usuário acesse a tela Execução das Edificações de Paracatu
-	Quando o usuário acessar a tela Execução das Edificações de Paracatu
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
-
 
 	
 Exercitando a logica para entendimento dos requisito da Task 
@@ -317,10 +316,8 @@ implementação o requisito > Back end > AtendimentoSocial.cs
 Segundo requisito da Task
 
 	StatusAquisicaoImovel  que devem ser criados:
-       	   Análise Documental
-     	   Estudos Técnicos
-      	   Caderno Imobiliário
-      	   Aprovação Caderno Imobiliário
+     	   Manifestacaoo De Interesse Técnicos
+      	   Selecionado
 
 implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.cs
 	
@@ -333,8 +330,5 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           Cancelado = 2,
           Selecionado = 3,
           ManifestacaooDeInteresse = 4,
-          Adquirido = 5,
-          FormalizadoIndicacao = 6,
-          ImovelEmNegociação = 7,
-          AnaliseDocumental = 8,                }}
+          Adquirido = 5,         }}
 
