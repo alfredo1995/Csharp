@@ -238,7 +238,7 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	//chamando o parametro
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
-	
+
 	
 requisito de calculo do status (id) de cada objeto
 
@@ -248,6 +248,35 @@ requisito de calculo do status (id) de cada objeto
 
 implementando requisito de calculo no back end
 
+	por padrão recebe get e usa set para setar os atributos
+	para implementar uma função altera o metodo set pela função
+	
+implementando a função de calculo do status no back end ( ExecucaoObraEdificacao	
+
+    public StatusExecucaoObraEdificacao StatusDoProcessoContencaoLote
+        {
+            get
+            {
+                return CalculoStatus(PorcentagemDoAvançoContencaoLote);
+            }
+                
+                
+         }
+	 
+	 
+    private StatusExecucaoObraEdificacao? CalculoStatus(int? poncetagemAvanço)
+        {
+            if(poncetagemAvanço == null || poncetagemAvanço == 0)
+            {
+                return StatusExecucaoObraEdificacao.NaoIniciado;
+            }else if (poncetagemAvanço > 00 && poncetagemAvanço < 100)
+            {
+                return StatusExecucaoObraEdificacao.EmAndamento;
+            }else 
+            {
+                return StatusExecucaoObraEdificacao.NaoIniciado;
+            }
+        }
 
 
 subindo a alterações
@@ -288,36 +317,6 @@ Exemplo de roteiro de teste
 
 
 	
-Exercitando a logica para entendimento dos requisito da Task 
-
-		Se NÃO houver um processo de Aquisição (imóvel cadastrado) aberto:
-		Aquisição = vazio à SubStatus = Visita de Qualificação
-		Aquisição = vazio e Interesse Manifestado = verdadeiro à SubStatus = Manifestação de Interesse
-
-	Se HOUVER um processo de Aquisição (imóvel cadastrado) aberto:
-	
-	Aquisição ≠ vazio e StatusAquisicaoImovel  = Análise Documental Concluída à Substatus = Formalização de Indicação	
-	Aquisição ≠ vazio e StatusAquisicaoImovel   = Estudos Técnicos Concluídos à Substatus = Caderno Imobiliário
-
-
-implementação o requisito > Back end > AtendimentoSocial.cs
-	
-	        if (Status != StatusAtendimentoSocial.EmAtendimento) return null;
-
-                var aquisicoes = Aquisicoes?.Where(c => c.Excluido == false).ToList();
-
-                if (aquisicoes == null || aquisicoes.Count == 0)
-                {
-                    return (this.InteresseManifestado == true) ? SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel :   
-		    SubStatusAtendimentoSocial.VisitaDeQualificacao;
-                }
-
-	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.AnaliseDocumentalConcluida)) return SubStatusAtendimentoSocial.FormalizacaoDaIndicacaoDoImovel;
-	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.EstudosTecnicosConcluido)) return SubStatusAtendimentoSocial.CadernoImobiliario;
-	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Adquirido)) return SubStatusAtendimentoSocial.Adquirido;
-	if (aquisicoes.Any(c => c.Status == StatusAquisicaoImovel.Cancelado)) return SubStatusAtendimentoSocial.ManifestacaoDeInteresseDoImóvel;
-
-	return null;
 	
 	
 Segundo requisito da Task
