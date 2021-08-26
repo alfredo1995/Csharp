@@ -199,11 +199,11 @@ criando a propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
 
 setando a propriedade do objeto(tipo enum) no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
 
-	//chamando a propriedade do obj no construtor ( fazendo build )
+	//chamando a propriedade do obj  ( fazendo build )
  	public StatusExecucaoObraEdificacao Status_Do_Processo_Id { get; set; }
         public ResponseEnum<StatusExecucaoObraEdificacao> Status_Do_Processo { get; set; }
 	
-	//injetando o obj response da entidade ( chamando build )
+	//injetando o obj no construtor do response da entidade ( chamando build )
 	Status_Do_Processo_Id = obj.Status_Do_Processo;
         Status_Do_Processo = new ResponseEnum<StatusExecucaoObraEdificacao>(obj.Status_Do_Processo);
 
@@ -227,10 +227,10 @@ criando a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdif
 
 setando a propriedade do objeto(tipo enum(null))  no construtor e injetando a propriedade no response da entidade ExecucaoObraEdificacaoResponse.cs  (DePara)
 
-	//chamando a propriedade do obj no construtor ( fazendo build )
+	//chamando a propriedade do obj  ( fazendo build )
         public int? Status_Do_Processo { get; set; }
 	
-	//injetando o obj response da entidade ( chamando build )
+	//injetando no obj construtor response da entidade ( chamando build )
         Status_Do_Processo = obj.Status_Do_Processo;
 
 setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
