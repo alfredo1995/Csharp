@@ -175,7 +175,7 @@ puxando a branch
 
 	selecionei a branch (feature) no visual studio e o code
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-	
+	git checkout <nome-da-branch>
 	git fetch 
 	git pull
 	
