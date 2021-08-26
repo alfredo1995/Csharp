@@ -169,15 +169,16 @@ criar a branch
 	feature/AG/ID-NomeDaHistoria
 	seleciona a branch a ser criada na develop
 	
-Subindo a branch
+
+	
+puxando a branch
+
+	selecionei a branch (feature) no visual studio e o code
+	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
 	
 	git fetch 
 	git pull
 	
-selecionei a feature no visual studio e o code
-
-	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-
 requesito da task
 
 	Deverão ser incluídos os campos:
@@ -310,14 +311,6 @@ Exemplo de roteiro de teste
 	Quando o usuário acessar a tela Execução das Edificações de Familiar
 	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
 
-	Cenário: Usuário acessa a tela Execução das Edificações dos Gesteira
-	Dado que o Usuário acesse a tela Execução das Edificações de Gesteira
-	Quando o usuário acessar a tela Execução das Edificações de Gesteira
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
-
-
-	
-	
 	
 Segundo requisito da Task
 
