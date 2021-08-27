@@ -65,7 +65,9 @@ Comandos GIT's utilizados frequentemente
               - git merge <nome-da-branch>                                  -> mesclar as branches
 	      - cd NomeDaPasta                                              -> cd acessa a pasta
 	      - .. 							    -> dois pontos volta a pasta
-	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou CTRL + K + D   
+	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou  CTRL + K + D   
+	      - comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
+	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
 
 <br>      
 
