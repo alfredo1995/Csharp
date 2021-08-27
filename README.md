@@ -3,9 +3,9 @@ Capaz de desenvolver programas com a linguagem C#
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos
 
 
-     1) Introdução - Temas abordados são: algoritmos, estrutura de dados e introdução ao .NET framework;  
+      1) Introdução - algoritmos, estrutura de dados e introdução ao .NET framework;  
 
-     2) Configuração do Ambiente - Os passos necessários para configurar o computador para executar o C#;
+      2) Configuração do Ambiente - Os passos necessários para configurar o computador para executar o C#;
 
       3) Fundamentos - Tem por objetivo estabelecer bases sólidas sobre a linguagem;
     
@@ -27,7 +27,6 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       
 <br>
 
-
 Subindo arquivos p/ um repositório no github
 
               - git init                                                     ->  iniciar project no git
@@ -35,10 +34,6 @@ Subindo arquivos p/ um repositório no github
               - git add --all                                                ->  add as alterações no projeto                                         
               - git push -f                                                  ->  pra forçar o envio e salvar no repositório
               - git commit -m "first commit"                                 ->  mensagem explicando a mudança no código
-              - git branch -M main                                           ->  criar branches do projeto
-              - git remote add origin https://github.com/alfredo1995/2.git   ->  onde e o caminho do acesso ao github
-              - git push -u origin main                                      ->  confirmando o push
-
 
 Atualizando arquivos existente de um repositório no github
 
@@ -47,12 +42,14 @@ Atualizando arquivos existente de um repositório no github
               - git commit -m "descriçãodocommit"                            ->  descrever o commit
               - git push -f                                                  ->  pra forçar o envio do arquivo pro git 
 
-
 Comandos GIT's utilizados frequentemente
 
               - git config --global user.name "alfredo1995"  	      	    -> configurando o usuario do git
               - git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
-              - git clone <https://nome-do-link>                            -> baixar o código-fonte existente de um repositório
+              - git clone <https://nome-do-link>                            -> baixar o código-fonte existente de um repositório	      
+              - git branch -M main                                          -> Criar branches do projeto
+              - git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho do acesso ao github
+              - git push -u origin main                                     -> confirmando o push
               - git branch <nome-do-branch>                                 -> criar, listar e excluir branches
               - git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
               - git branch or git branch --list                             -> para ver as branches
@@ -68,26 +65,20 @@ Comandos GIT's utilizados frequentemente
               - git merge <nome-da-branch>                                  -> mesclar as branches
 	      - cd NomeDaPasta                                              -> cd acessa a pasta
 	      - .. 							    -> dois pontos volta a pasta
-             
-arrumar a indentação vs code e vs
+	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou CTRL + K + D                  
 
-	      SHIFT + ALT + F ou CTRL + K + D
-              
-	      
+<br>      
 
 criar a branch
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
-	seleciona a branch a ser criada na develop
 	
 Subindo a branch
 	
-	git fetch 
-		
-selecionei a feature no visual studio e o code
-
+	Selecionei a feature no visual studio e o code
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
+	git fetch 
 	git pull
 
 Subindo a branch 
@@ -98,20 +89,13 @@ Subindo a branch
 	git commit -m ""
 	git push
 
-alteração nos campos da aplicação ... puxando a branch atualizada e mandando as alterações da nova 
-	
-	git fetch 
-	git pull
+subindo as alterações nos campos da aplicação
 
-subindo as alterações
-	
 	git status 
 	git merge 
 	git commit "descricao"
         git push
-	
-  
-	      
+	  	      
 <br>
 
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
@@ -303,12 +287,6 @@ subindo a alterações
 
 
 <br><br><br><br>
-
-
-
-Exemplo de roteiro de teste
-
-	
 
 	
 Segundo requisito da Task
