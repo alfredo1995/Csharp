@@ -151,26 +151,35 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
 
 
-Etapas de desenvolvimento de task
+Etapas de desenvolvimento das task referente a Sprint
 
-	desenvolvendo as tarefas da sprint
+	Implementando os requisitos da task
 	
 criar roteiro de teste
-	
-	exemplo de roteiro de teste
 
-atualizar a develop no Azure DevOps com o roteiro de teste criado
-	
+	Feature: #54 - Readequação da rotina Controle de Obra
+
+	Sucesso:
+	Cenário: Usuário acessa as telas Execução das Edificações de Bento
+	Dado que o Usuário acesse a tela Execução das Edificações de Bento
+	Quando o usuário acessar a tela Execução das Edificações de Bento
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
+
+	Cenário: Usuário acessa a tela Execução das Edificações do Familiar
+	Dado que o Usuário acesse a tela Execução das Edificações de Familiar
+	Quando o usuário acessar a tela Execução das Edificações de Familiar
+	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
+
+adicioanar o roteiro de teste da develop no Azure DevOps 
+
 	validação do roteiro de teste
 	
-criar a branch
+criar a branch do front e back
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
 	seleciona a branch a ser criada na develop
-	
-
-	
+		
 puxando a branch
 
 	selecionei a branch (feature) no visual studio e o code
@@ -281,12 +290,13 @@ implementando a função de calculo do status no back end ( ExecucaoObraEdificac
 
 
 subindo a alterações
-
+	
 	Update-Database
+	ctrl + shift + b
+	adcionar todas as alteraçores em preparação	
 	git status 
-	git merge 
 	git commit "descriçao"
-        git push
+        git push ou git merge
 
 
 
@@ -298,18 +308,7 @@ subindo a alterações
 
 Exemplo de roteiro de teste
 
-	Feature: #54 - Readequação da rotina Controle de Obra
-
-	Sucesso:
-	Cenário: Usuário acessa as telas Execução das Edificações de Bento
-	Dado que o Usuário acesse a tela Execução das Edificações de Bento
-	Quando o usuário acessar a tela Execução das Edificações de Bento
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
-
-	Cenário: Usuário acessa a tela Execução das Edificações do Familiar
-	Dado que o Usuário acesse a tela Execução das Edificações de Familiar
-	Quando o usuário acessar a tela Execução das Edificações de Familiar
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
+	
 
 	
 Segundo requisito da Task
