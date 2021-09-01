@@ -337,7 +337,7 @@ criando a propriedade do objeto p/ response da entidade atendimoSocial-modal-sta
 
 	 Usuario = $rootScope.user.name
 
-recebendo request do back end setada na controlerevisao atendimentosocialcontroller.cs
+recebendo request do back end setada na ControleRevisaoAtendimentoSocialcontroller.cs
 
 	[Route("incluir")]
         [HttpPost]
@@ -357,7 +357,7 @@ recebendo request do back end setada na controlerevisao atendimentosocialcontrol
         }
 
                 
-setada na controlerevisao atendimentosocialcontrollerRequest.cs   
+setada na ControleRevisaoAtendimentoSocialcontrollerRequest.cs   
 
 	 public string Usuario { get; set; }
 
