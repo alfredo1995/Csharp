@@ -25,7 +25,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
      11) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;
       
-<br>
+<br><br>
 
 Subindo arquivos p/ um repositório no github
 
@@ -69,36 +69,8 @@ Comandos GIT's utilizados frequentemente
 	      - comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
 	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
 
-<br>      
+<br><br>     
 
-criar a branch
-
-	Repos > New Branch 
-	feature/AG/ID-NomeDaHistoria
-	
-Subindo a branch
-	
-	Selecionei a feature no visual studio e o code
-	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-	git fetch 
-	git pull
-
-Subindo a branch 
-
-	git fetch 
-	git status
-	git add .
-	git commit -m ""
-	git push
-
-subindo as alterações nos campos da aplicação
-
-	git status 
-	git merge 
-	git commit "descricao"
-        git push
-	  	      
-<br>
 
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
@@ -130,8 +102,40 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		terminal nuget > Update-Database -Verbose -force 
 		Depuração : shift + f5
 
+<br><br>
+
+
+criar a branch
+
+	Repos > New Branch 
+	feature/AG/ID-NomeDaHistoria
+	
+Subindo a branch
+	
+	Selecionei a feature no visual studio e o code
+	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
+	git fetch 
+	git pull
+
+Subindo a branch 
+
+	git fetch 
+	git status
+	git add .
+	git commit -m ""
+	git push
+
+subindo as alterações nos campos da aplicação
+
+	git status 
+	git merge 
+	git commit "descricao"
+        git push
+	  	      
 
 <br><br><br><br>
+
+
 
 
 
@@ -309,4 +313,126 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           Selecionado = 3,
           ManifestacaooDeInteresse = 4,
           Adquirido = 5,         }}
+
+
+<br><br><br><br>
+
+
+requisito 1
+
+	Renomear o campo de data para “Data de Formalização da Alteração”. A data que o usuário fez a alteração também deverá ser salva no sistema e ficar disponível no relatório de dados históricos;
+	
+alterando o nome da propriedade do obj da entidade atendimentoSocial-modal-status.html
+
+	 <label class="control-label">
+            Data de Formalização da Alteração<span class="symbol required"></span>
+         </label>
+
+
+requisito 2/1
+
+	O sistema deverá listar automaticamente o usuário logado como Responsável pela alteração.
+
+criando a propriedade do objeto p/ response da entidade atendimoSocial-modal-statul-crtl.js
+
+	 Usuario = $rootScope.user.name
+
+recebendo request do back end setada na controlerevisao atendimentosocialcontroller.cs
+
+	[Route("incluir")]
+        [HttpPost]
+        public IHttpActionResult Incluir([FromBody] ControleRevisaoAtendimentoSocialRequest request, ResponsavelRequest responsavel)
+        {
+            try
+            {
+                var obj = request.RetornoDominio();
+                var resultado = _controleRevisaoAtendimentoSocialAppServico.Adicionar(obj, responsavel.Usuario);
+                var response = new ControleRevisaoAtendimentoSocialResponse(resultado);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+                
+setada na controlerevisao atendimentosocialcontrollerRequest.cs   
+
+	 public string Usuario { get; set; }
+
+injetou no construtor atendimentosocialcontrollerRequest.cs 
+    
+	Usuario = this.Usuario      
+
+controleRevisaoatendimentosocialappservico.cs
+
+	     private AtendimentoSocial NovoAtendimentoSocial(ControleRevisaoAtendimentoSocial entidade)
+        {
+            return new AtendimentoSocial
+            {
+                Atingido_Id = entidade.Atingido_Id,
+                Usuario =  entidade.Usuario 
+            };
+        }
+
+
+requisito 2/2
+
+	Este campo deve ficar disponível no relatório de dados históricos;
+
+atendimentosocialconfiguração 
+
+	    if (AtendimentoSocial.Usuario_Obrigatorio) Property(c => c.Usuario).IsRequired();
+            else Property(c => c.Usuario).IsOptional();
+
+requisito 3 
+
+	Campo Novo Status: excluir as categorias: Aquisicao_Imovel DefinicaoDeLote AguardandoFicha atendimentosocial.cs 
+
+atendimentosocail.cs
+
+       public static StatusAtendimentoSocial[] StatusDoUniversoElegivel
+        {
+            get
+            {
+                return new StatusAtendimentoSocial[]
+                {
+                    //StatusAtendimentoSocial.AguardandoFicha,
+                    //StatusAtendimentoSocial.Aquisicao_Imovel,
+                    //StatusAtendimentoSocial.DefinicaoDeLote,
+                    StatusAtendimentoSocial.EmAtendimento,
+                    StatusAtendimentoSocial.Finalizado,
+                    StatusAtendimentoSocial.Interrompido,
+                    StatusAtendimentoSocial.InterrompidoNaoIniciado,
+                };
+            }
+        }
+
+requisito 4
+
+	Excluir o campo “Verificado por”;
+
+atendimentosocial-modal-status.html 
+
+	            <!-- <div class="form-group col-md-12"
+                ng-class="{'has-error':formAtendimentoSocialModalStatus.VerificadoPor.$dirty && formAtendimentoSocialModalStatus.VerificadoPor.$invalid, 'has-success':formAtendimentoSocialModalStatus.VerificadoPor.$valid}">
+                <label class="control-label">
+                    Verificado por<span class="symbol required"></span>
+                </label>
+
+                <ui-select 
+                    ng-model="controller.entidade.VerificadoPor"
+                    ng-change="controller.entidade.VerificadoPor_Id=controller.entidade.VerificadoPor.Id;"
+                    name="VerificadoPor" theme="bootstrap"
+                    required>
+                    <ui-select-match placeholder="Verificado por..." >
+                        {{$select.selected.Individuo.Pessoa.Nome}}
+                    </ui-select-match>
+                    <ui-select-choices repeat="item in controller.listaRecursosHumanos | filter : $select.search">
+                        <div ng-bind-html="item.Individuo.Pessoa.Nome | highlight: $select.search"></div>                        
+                    </ui-select-choices>
+                </ui-select>
+                <span class="error text-small block" ng-if="formAtendimentoSocialModalStatus.VerificadoPor.$dirty && formAtendimentoSocialModalStatus.VerificadoPor.$error.required">Verificador é obrigatório</span>
+            </div>  -->	
 
