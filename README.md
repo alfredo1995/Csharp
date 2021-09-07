@@ -11,7 +11,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
     
       4) Estruturas de Controle - Aqui aprenderemos a controlar o fluxo da aplicação;
 
-      5) Classes & Métodos - Aqui inicia a nossa jornada pela Orientação a Objetos
+      5) Classes & Métodos - Aqui inicia a nossa jornada pela Orientação a Objetos 
 
       6) Coleções - Estruturas de dados clássicas serão abordadas: array, listas, filas, pilhas, dicionários
 
