@@ -70,7 +70,7 @@ Comandos GIT's utilizados frequentemente
 	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
 
 <br><br>     
-
+ 
 
 Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 
