@@ -88,7 +88,8 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
 		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
 		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel
-		Limpar solução > ctrl + shift + b = copilar 
+		console gerenciador  > Update-Database -Verbose
+		Definir a Api como projeto de inicialização > Limpar solução > ctrl + shift + b = copilar 
 
 	5) Conexão com o banco de dados >
 		Azure DevOps > Dowloado do banco de dados Renova
@@ -99,9 +100,22 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 	6) Inicialização do back end >
 		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
 		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
-		terminal nuget > Update-Database -Verbose -force 
+		terminal nuget > Update-Database -Verbose -f 
 		Depuração : shift + f5
-
+		
+	7) cadastrar novos usuario
+		entidade do backend Atributo e Autenticação > Descomente o “return true”.
+		abrir o Swagger > usuario > geral usuario post > modelo de parameters
+		
+		{
+		  "Email": "alfredo.gomes@ketra.com.br",
+		  "Nome": "Alfredo Gomes",
+		  "Senha": "ketra123",
+		  "PrimeiroAcesso": true,
+		}	
+		
+	
+		
 <br><br>
 
 
