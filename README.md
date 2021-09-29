@@ -304,6 +304,58 @@ subindo a alterações
 
 
 
+2.1) requisito
+	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
+	Coletivo Bento
+	Coletivo Paracatu
+
+2.1) implementando requesito
+
+//acessa a controller da entidade
+
+atendimentosocialcontroller.cs  
+
+	//acessar a rota da entidade
+	[Route("relatorioPlanejamentoSocial")]
+
+        //acessar o response dessa entidade onde retorna uma listaResponse (onde esta o nosso enum) f12
+	 var response = PlanejamentoSocialHistoricoDatasResponse.ListaResponse(resultado);  .... rertonado um colletion (lista)
+
+//coletion do response da entidade q foi chamada
+
+planejamentosocialhistoricodataresponse.cs
+
+	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
+        {
+
+//entidade recebe um coletion( coletion retorna a lista toda)  all
+// vou implementar o requisito fazendo uma condição if() 
+// para que retorne apenas o atendimento coletivos bento e paracuta em vez de tudo 
+
+
+// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) vai dar a opção de onde esta vindo kkk. Coletivo_Bento(propriedade do objeto)
+
+if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+
+
+	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
+        {
+            if (listaDominio == null) return null;
+            ICollection<PlanejamentoSocialHistoricoDatasResponse> listaResponse = new Collection<PlanejamentoSocialHistoricoDatasResponse>();
+            foreach (var item in listaDominio)
+            {
+                if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+                {
+                    if (item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.EmAtendimento || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Interrompido || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Finalizado)
+                    {
+                        var _response = new PlanejamentoSocialHistoricoDatasResponse(item);
+                        listaResponse.Add(_response);
+                    }
+                }
+
+            }
+
+
 
 
 <br><br><br><br>
