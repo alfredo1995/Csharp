@@ -115,8 +115,13 @@ Configuração do ambiente de desenvolvimento Local back e front end
 		}	
 		
 	8) Criando consluta para registrar novo Membro do Perfil no banco de dados MySQL Server
+	
+		SELECT *  FROM Usuarios
 		
-		SELECT * FROM 
+		SELECT *  FROM MembroDoPerfil
+		WHERE Usuario_Id = 142
+
+		INSERT INTO MembroDoPerfil VALUES (27, 143)
 	
 		
 <br><br>
