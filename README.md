@@ -296,16 +296,6 @@ implementando a função de calculo do status no back end ( ExecucaoObraEdificac
         }
 
 
-subindo a alterações
-	
-	Update-Database
-	ctrl + shift + b
-	adcionar todas as alteraçores em preparação	
-	git status 
-	git commit "descriçao"
-        git push ou git merge
-
-
 
 2.1) requisito
 
@@ -315,7 +305,7 @@ subindo a alterações
 
 2.1) implementando requesito
 
-	//acessa a controller da entidade
+	//acessar a controller da entidade
 
 	atendimentosocialcontroller.cs  
 
@@ -360,7 +350,14 @@ subindo a alterações
             }
 
 
-
+subindo a alterações
+	
+	Update-Database
+	ctrl + shift + b
+	adcionar todas as alteraçores em preparação	
+	git status 
+	git commit "descriçao"
+        git push ou git merge
 
 <br><br><br><br>
 
@@ -447,15 +444,6 @@ controleRevisaoatendimentosocialappservico.cs
         }
 
 
-requisito 2/2
-
-	Este campo deve ficar disponível no relatório de dados históricos;
-
-atendimentosocialconfiguração 
-
-	    if (AtendimentoSocial.Usuario_Obrigatorio) Property(c => c.Usuario).IsRequired();
-            else Property(c => c.Usuario).IsOptional();
-
 requisito 3 
 
 	Campo Novo Status: excluir as categorias: Aquisicao_Imovel DefinicaoDeLote AguardandoFicha atendimentosocial.cs 
@@ -479,30 +467,4 @@ atendimentosocail.cs
             }
         }
 
-requisito 4
-
-	Excluir o campo “Verificado por”;
-
-atendimentosocial-modal-status.html 
-
-	            <!-- <div class="form-group col-md-12"
-                ng-class="{'has-error':formAtendimentoSocialModalStatus.VerificadoPor.$dirty && formAtendimentoSocialModalStatus.VerificadoPor.$invalid, 'has-success':formAtendimentoSocialModalStatus.VerificadoPor.$valid}">
-                <label class="control-label">
-                    Verificado por<span class="symbol required"></span>
-                </label>
-
-                <ui-select 
-                    ng-model="controller.entidade.VerificadoPor"
-                    ng-change="controller.entidade.VerificadoPor_Id=controller.entidade.VerificadoPor.Id;"
-                    name="VerificadoPor" theme="bootstrap"
-                    required>
-                    <ui-select-match placeholder="Verificado por..." >
-                        {{$select.selected.Individuo.Pessoa.Nome}}
-                    </ui-select-match>
-                    <ui-select-choices repeat="item in controller.listaRecursosHumanos | filter : $select.search">
-                        <div ng-bind-html="item.Individuo.Pessoa.Nome | highlight: $select.search"></div>                        
-                    </ui-select-choices>
-                </ui-select>
-                <span class="error text-small block" ng-if="formAtendimentoSocialModalStatus.VerificadoPor.$dirty && formAtendimentoSocialModalStatus.VerificadoPor.$error.required">Verificador é obrigatório</span>
-            </div>  -->	
 
