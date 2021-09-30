@@ -198,12 +198,12 @@ puxando a branch
 requesito da task
 
 	Deverão ser incluídos os campos:
-	Contenção Lote
-	Status do processo
-	% do avanço (decimal)
-	Data Prevista (Date Time)
-	Data Programada/Realizada (Date Time)
-	ID Exclusivo do Project (int)
+		Contenção Lote
+		Status do processo
+		% do avanço (decimal)
+		Data Prevista (Date Time)
+		Data Programada/Realizada (Date Time)
+		ID Exclusivo do Project (int)
 
 implementando os requisitos da historia na sprint
 
@@ -308,15 +308,16 @@ subindo a alterações
 
 
 2.1) requisito
+
 	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
 	Coletivo Bento
 	Coletivo Paracatu
 
 2.1) implementando requesito
 
-//acessa a controller da entidade
+	//acessa a controller da entidade
 
-atendimentosocialcontroller.cs  
+	atendimentosocialcontroller.cs  
 
 	//acessar a rota da entidade
 	[Route("relatorioPlanejamentoSocial")]
@@ -324,21 +325,21 @@ atendimentosocialcontroller.cs
         //acessar o response dessa entidade onde retorna uma listaResponse (onde esta o nosso enum) f12
 	 var response = PlanejamentoSocialHistoricoDatasResponse.ListaResponse(resultado);  .... rertonado um colletion (lista)
 
-//coletion do response da entidade q foi chamada
+	//coletion do response da entidade q foi chamada
 
-planejamentosocialhistoricodataresponse.cs
+	planejamentosocialhistoricodataresponse.cs
 
 	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
         {
 
-//entidade recebe um coletion( coletion retorna a lista toda)  all
-// vou implementar o requisito fazendo uma condição if() 
-// para que retorne apenas o atendimento coletivos bento e paracuta em vez de tudo 
+	//entidade recebe um coletion( coletion retorna a lista toda)  all
+	// vou implementar o requisito fazendo uma condição if() 
+	// para que retorne apenas o atendimento coletivos bento e paracuta em vez de tudo 
 
 
-// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) vai dar a opção de onde esta vindo kkk. Coletivo_Bento(propriedade do objeto)
+	// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) vai dar a opção de onde esta vindo kkk. 	Coletivo_Bento(propriedade do objeto)
 
-if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
 
 
 	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
