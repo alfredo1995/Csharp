@@ -72,7 +72,7 @@ Comandos GIT's utilizados frequentemente
 <br><br>     
  
 
-Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
+Configuração do ambiente de desenvolvimento Local back e front end
 
 	1) clonar projetos Back e Front >
 		Azure DevOps> Repos > Clonar ( back e front ) 
@@ -87,7 +87,7 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
 		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
 		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
-		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel
+		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel se necessario
 		console gerenciador  > Update-Database -Verbose
 		Definir a Api como projeto de inicialização > Limpar solução > ctrl + shift + b = copilar 
 
@@ -114,6 +114,9 @@ Configuração do ambiente de desenvolvimento Local .NET Core 5 / Angular
 		  "PrimeiroAcesso": true,
 		}	
 		
+	8) Criando consluta para registrar novo Membro do Perfil no banco de dados MySQL Server
+		
+		SELECT * FROM 
 	
 		
 <br><br>
