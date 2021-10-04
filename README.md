@@ -283,7 +283,7 @@ acessada a entidade planejamentosocialhistoricodataresponse.cs
 	
 	foreach (var item in listaDominio)
 	
-implementando requisito  no foreach para que apenas retorne os atendimentos coletivo bento e paracuta
+implementando requisito no foreach para que apenas retorne os atendimentos coletivo bento e paracuta
     
 	//fazendo uma condição if()  para que o response dessa entidade retorne apenas um derteminado valor, em vez de tudo
 
@@ -294,6 +294,7 @@ implementando requisito  no foreach para que apenas retorne os atendimentos cole
 	foreach (var item in listaDominio)
         {
         if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+	
                 {
                     if (item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.EmAtendimento || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Interrompido || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Finalizado)
                     {
@@ -304,28 +305,6 @@ implementando requisito  no foreach para que apenas retorne os atendimentos cole
 
             }	
 		
-		
-	//foreach (var item in listaDominio)
-	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade
-	== 	RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
-
-
-	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
-        {
-            if (listaDominio == null) return null;
-            ICollection<PlanejamentoSocialHistoricoDatasResponse> listaResponse = new Collection<PlanejamentoSocialHistoricoDatasResponse>();
-            foreach (var item in listaDominio)
-            {
-                if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
-                {
-                    if (item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.EmAtendimento || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Interrompido || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Finalizado)
-                    {
-                        var _response = new PlanejamentoSocialHistoricoDatasResponse(item);
-                        listaResponse.Add(_response);
-                    }
-                }
-
-            }
 
 
 
