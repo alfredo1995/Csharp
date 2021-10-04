@@ -278,16 +278,36 @@ acessada a entidade planejamentosocialhistoricodataresponse.cs
 	//retornando toda colletion do response da entidade 
  	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
         {
-
-implementando requisito para que apenas retorne os atendimentos coletivo bento e paracuta
-
+	
+	ICollection<PlanejamentoSocialHistoricoDatasResponse> listaResponse = new Collection<PlanejamentoSocialHistoricoDatasResponse>();
+	
+	foreach (var item in listaDominio)
+	
+implementando requisito  no foreach para que apenas retorne os atendimentos coletivo bento e paracuta
+    
 	//fazendo uma condição if()  para que o response dessa entidade retorne apenas um derteminado valor, em vez de tudo
 
 		// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) 
 		//RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial vai dar a opção de onde esta vindo().
 		//.Coletivo_Bento(acessando propriedade do objeto da entidade)
+		
+	foreach (var item in listaDominio)
+        {
+        if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+                {
+                    if (item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.EmAtendimento || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Interrompido || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Finalizado)
+                    {
+                        var _response = new PlanejamentoSocialHistoricoDatasResponse(item);
+                        listaResponse.Add(_response);
+                    }
+                }
 
-	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == 		RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+            }	
+		
+		
+	//foreach (var item in listaDominio)
+	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade
+	== 	RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
 
 
 	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
