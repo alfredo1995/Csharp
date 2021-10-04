@@ -76,11 +76,10 @@ Configuração do ambiente de desenvolvimento Local back e front end
 
 	1) clonar projetos Back e Front >
 		Azure DevOps> Repos > Clonar ( back e front ) 
-		Criar pasta Renova> git bash> git clone "endereçoProjetoASerClonado"
-	2) baixar depedencia do Front end Packages
-		Cola depedencia > dentro da pasta front clonada
-
-	3) inicialização do front end > 
+		Criar pasta Projeto> terminal git bash> git clone "endereçoProjetoASerClonado"
+		
+	3) inicialização do front end > 		
+		baixar depedencia do Front end Packages
 		vs code> terminal : npm start
 
 	4) Configuração do back end >
@@ -99,13 +98,13 @@ Configuração do ambiente de desenvolvimento Local back e front end
 
 	6) Inicialização do back end >
 		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
-		terminal nuget > selecionar> projeto padrao : RENOVA.Infra.Dados
+		terminal nuget > selecionar> projeto padrao : PROJETO.Infra.Dados
 		terminal nuget > Update-Database -Verbose -f 
 		Depuração : shift + f5
 		
 	7) cadastrar novos usuario
-		entidade do backend Atributo e Autenticação > Descomente o “return true”.
-		abrir o Swagger > usuario > geral usuario post > modelo de parameters
+		backend entidade Atributo e Autenticação > Descomente o “return true”.
+		F5 > abrir o Swagger > usuario > geral usuario post > modelo de parameters
 		
 		{
 		  "Email": "alfredo.gomes@ketra.com.br",
@@ -114,7 +113,7 @@ Configuração do ambiente de desenvolvimento Local back e front end
 		  "PrimeiroAcesso": true,
 		}	
 		
-	8) Criando consluta para registrar novo Membro do Perfil no banco de dados MySQL Server
+	8) Criando consulta para registros de novos Membros do Perfil no banco de dados
 	
 		SELECT *  FROM Usuarios
 		
