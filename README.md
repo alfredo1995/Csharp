@@ -261,47 +261,6 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
 
-	
-requisito de calculo do status (id) de cada objeto
-
-	% do avanço = 0 ("Não iniciado") 
-	% do avanço entre 1 e 99% ("Em andamento")
-	% do avanço = 100% ("Finalizado")
-
-implementando requisito de calculo no back end
-
-	por padrão recebe get e usa set para setar os atributos
-	para implementar uma função altera o metodo set pela função
-	
-implementando a função de calculo do status no back end ( ExecucaoObraEdificacao	
-
-    public StatusExecucaoObraEdificacao StatusDoProcessoContencaoLote
-        {
-            get
-            {
-                return CalculoStatus(PorcentagemDoAvançoContencaoLote);
-            }
-                
-                
-         }
-	 
-	 
-    private StatusExecucaoObraEdificacao? CalculoStatus(int? poncetagemAvanço)
-        {
-            if(poncetagemAvanço == null || poncetagemAvanço == 0)
-            {
-                return StatusExecucaoObraEdificacao.NaoIniciado;
-            }else if (poncetagemAvanço > 00 && poncetagemAvanço < 100)
-            {
-                return StatusExecucaoObraEdificacao.EmAndamento;
-            }else 
-            {
-                return StatusExecucaoObraEdificacao.NaoIniciado;
-            }
-        }
-
-
-
 2.1) requisito
 
 	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
@@ -353,6 +312,49 @@ implementando a função de calculo do status no back end ( ExecucaoObraEdificac
                 }
 
             }
+
+
+
+
+	
+3.1) requisito de calculo do status (id) de cada objeto
+
+	% do avanço = 0 ("Não iniciado") 
+	% do avanço entre 1 e 99% ("Em andamento")
+	% do avanço = 100% ("Finalizado")
+
+3.1) implementando requisito de calculo no back end
+
+	por padrão recebe get e usa set para setar os atributos
+	para implementar uma função altera o metodo set pela função
+	
+implementando a função de calculo do status no back end ( ExecucaoObraEdificacao	
+
+    public StatusExecucaoObraEdificacao StatusDoProcessoContencaoLote
+        {
+            get
+            {
+                return CalculoStatus(PorcentagemDoAvançoContencaoLote);
+            }
+                
+                
+         }
+	 
+	 
+    private StatusExecucaoObraEdificacao? CalculoStatus(int? poncetagemAvanço)
+        {
+            if(poncetagemAvanço == null || poncetagemAvanço == 0)
+            {
+                return StatusExecucaoObraEdificacao.NaoIniciado;
+            }else if (poncetagemAvanço > 00 && poncetagemAvanço < 100)
+            {
+                return StatusExecucaoObraEdificacao.EmAndamento;
+            }else 
+            {
+                return StatusExecucaoObraEdificacao.NaoIniciado;
+            }
+        }
+
 
 
 subindo a alterações
