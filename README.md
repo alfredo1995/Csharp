@@ -158,10 +158,6 @@ subindo as alterações nos campos da aplicação
 
 
 
-
-
-
-
 Etapas de desenvolvimento das task referente a Sprint
 
 	Implementando os requisitos da task
@@ -283,8 +279,14 @@ acessada a entidade planejamentosocialhistoricodataresponse.cs
 	
 	foreach (var item in listaDominio)
 	
+requisito entidade planejamentosocialhistoricodataresponse.cs
+
+	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
+	Coletivo Bento
+	Coletivo Paracatu
+	
 implementando requisito no foreach para que apenas retorne os atendimentos coletivo bento e paracuta
-    
+
 	//fazendo uma condição if()  para que o response dessa entidade retorne apenas um derteminado valor, em vez de tudo
 
 		// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) 
@@ -296,6 +298,7 @@ implementando requisito no foreach para que apenas retorne os atendimentos colet
         if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
 	
                 {
+		    //Exibir somente os atendimentos com os seguintes Status: Em Atendimento, Interrompido e Finalizado.
                     if (item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.EmAtendimento || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Interrompido || item.AtendimentoSocial.Status == RENOVA.Geral.Dominio.Enumeradores.StatusAtendimentoSocial.Finalizado)
                     {
                         var _response = new PlanejamentoSocialHistoricoDatasResponse(item);
@@ -305,8 +308,6 @@ implementando requisito no foreach para que apenas retorne os atendimentos colet
 
             }	
 		
-
-
 
 
 	
