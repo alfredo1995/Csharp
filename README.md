@@ -168,18 +168,15 @@ Etapas de desenvolvimento das task referente a Sprint
 	
 criar roteiro de teste
 
-	Feature: #54 - Readequação da rotina Controle de Obra
+	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
+	Dado que o usuário acesse o Relatorio Planejamento Coletivos
+	Quando o usuário visualizar o Relatorio Planejamento Coletivos
+	Então será visualizado a coluna Atendimento Coletivo, após “Id Auto Delimitação”;
 
-	Sucesso:
-	Cenário: Usuário acessa as telas Execução das Edificações de Bento
-	Dado que o Usuário acesse a tela Execução das Edificações de Bento
-	Quando o usuário acessar a tela Execução das Edificações de Bento
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
-
-	Cenário: Usuário acessa a tela Execução das Edificações do Familiar
-	Dado que o Usuário acesse a tela Execução das Edificações de Familiar
-	Quando o usuário acessar a tela Execução das Edificações de Familiar
-	Então deverá conter os novos campos de Contenção Lote: Status do processo, % do avanço, Data Prevista, Data Programada/Realizada
+	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
+	Dado que o usuário acesse o Relatorio Planejamento Coletivos
+	Quando carregar a tabela do Relatorio Planejamento Coletivos
+	Então serão listadas apenas as Modalidades: Coletivo bento e Coletivo Paracutu
 
 adicioanar o roteiro de teste da develop no Azure DevOps 
 
@@ -202,10 +199,10 @@ puxando a branch
 requesito da task
 
 	Deverão ser incluídos os campos:
-		Contenção Lote
-		Status do processo
-		% do avanço (decimal)
-		Data Prevista (Date Time)
+		
+		Status_Do_Processo
+		Atendimento Coletivo
+		% do avanço (decimal)		
 		Data Programada/Realizada (Date Time)
 		ID Exclusivo do Project (int)
 
@@ -230,18 +227,17 @@ setando a propriedade do objeto(tipo enum) no construtor e injetando a proprieda
 
 setando a propriedade do objeto no resquest da entidade
 	
-	//chamando o parametro
+	//chamando por parametro
 	public int? Status_Do_Processo_Id { get; set; }
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo_Id,
-	
-	
+		
 obs sobre a forma de criar e setar as propriendade do objeto nas entidades: 
 
      quando o obejeto e do tipo enum, na hora de setar os atributos no response e request e obrigatorio passar o id 
      quando o obejto  e do tipo int, na hora de setar os atributos no response e request apenas e necessario setar a propriedade direto, sem id
      
-criando a propriedade do objeto(tipo int(nullable)) na entidade ExecucaoObraEdificacao.cs
+criando a propriedade do objeto(tipo int(nullable?)) na entidade ExecucaoObraEdificacao.cs
 
 	public int? Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
@@ -254,9 +250,8 @@ setando a propriedade do objeto(tipo enum(null))  no construtor e injetando a pr
 	//injetando no obj construtor response da entidade ( chamando build )
         Status_Do_Processo = obj.Status_Do_Processo;
 
-setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
+setando a propriedade do objeto(tipo enum(null)) no resquest da entidade ExecucaoObraEdificacaoRequest.cs
 	
-	//chamando o parametro
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
 
@@ -266,33 +261,33 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade
 	Coletivo Bento
 	Coletivo Paracatu
 
-2.1) implementando requesito
-
-	//acessar a controller da entidade
+2.1) implementando requesito acessando a controller da entidade
 
 	atendimentosocialcontroller.cs  
 
-	//acessar a rota da entidade
+acessar a rota da entidade
+
 	[Route("relatorioPlanejamentoSocial")]
 
-        //acessar o response dessa entidade onde retorna uma listaResponse (onde esta o nosso enum) f12
-	 var response = PlanejamentoSocialHistoricoDatasResponse.ListaResponse(resultado);  .... rertonado um colletion (lista)
+acessar o response dessa entidade onde a rota retorna uma listaResponse (enum) f12(acessar)
 
-	//coletion do response da entidade q foi chamada
+	 var response = PlanejamentoSocialHistoricoDatasResponse.ListaResponse(resultado);  //rertun colletion (lista)
 
-	planejamentosocialhistoricodataresponse.cs
-
-	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
+acessada a entidade planejamentosocialhistoricodataresponse.cs
+	
+	//retornando toda colletion do response da entidade 
+ 	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
         {
 
-	//entidade recebe um coletion( coletion retorna a lista toda)  all
-	// vou implementar o requisito fazendo uma condição if() 
-	// para que retorne apenas o atendimento coletivos bento e paracuta em vez de tudo 
+implementando requisito para que apenas retorne os atendimentos coletivo bento e paracuta
 
+	//fazendo uma condição if()  para que o response dessa entidade retorne apenas um derteminado valor, em vez de tudo
 
-	// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) vai dar a opção de onde esta vindo kkk. 	Coletivo_Bento(propriedade do objeto)
+		// if(se) item(lista). atendimentosocial(entidade). objeto da entidade(modalidade) ==(recebe) 
+		//RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial vai dar a opção de onde esta vindo().
+		//.Coletivo_Bento(acessando propriedade do objeto da entidade)
 
-	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
+	if (item.AtendimentoSocial.Modalidade == RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Bento || item.AtendimentoSocial.Modalidade == 		RENOVA.Geral.Dominio.Enumeradores.ModalidadeAtendimentoSocial.Coletivo_Paracatu)
 
 
 	public static ICollection<PlanejamentoSocialHistoricoDatasResponse> ListaResponse(ICollection<PlanejamentoSocialHistoricoDatas> listaDominio)
