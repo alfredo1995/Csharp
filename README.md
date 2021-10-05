@@ -193,6 +193,15 @@ puxando a branch
 	git fetch 
 	git pull
 	
+subindo a alterações
+	
+	Update-Database
+	ctrl + shift + b
+	adcionar todas as alteraçores em preparação	
+	git status 
+	git commit -m "initial commit"
+        git push ou git merge
+	
 requesito da task
 
 	Deverão ser incluídos os campos:
@@ -350,16 +359,6 @@ implementando a função de calculo do status no back end ( ExecucaoObraEdificac
             }
         }
 
-
-
-subindo a alterações
-	
-	Update-Database
-	ctrl + shift + b
-	adcionar todas as alteraçores em preparação	
-	git status 
-	git commit "descriçao"
-        git push ou git merge
 
 <br><br><br><br>
 
