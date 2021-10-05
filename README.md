@@ -68,7 +68,7 @@ Comandos GIT's utilizados frequentemente
 	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou  CTRL + K + D   
 	      - comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
 	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
-	      - selecionar varios para alterar tudo visual studio           -> CTRL + D / repeti o comando pra ir selecionando
+	      - selecionar varios para alterar tudo vs code                 -> CTRL + D / repeti o comando pra ir selecionando
 
 <br><br>     
  
