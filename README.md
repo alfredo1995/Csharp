@@ -127,17 +127,22 @@ Configuração do ambiente de desenvolvimento Local back e front end
 <br><br>
 
 
-criar a branch
+criar a branch no Azure DevOps
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
+	basead on Develop
+	user story 322 
 	
-Subindo a branch
+Subindo a branch na IDE
 	
 	Selecionei a feature no visual studio e o code
 	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-	git fetch 
+	
+	git brach
+	git fetch 	
 	git pull
+	git checkout -b feature/AG/322-modal-cancelamento-imovel
 
 Subindo a branch 
 
