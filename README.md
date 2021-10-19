@@ -47,7 +47,7 @@ Comandos GIT's utilizados frequentemente
 
               - git config --global user.name "alfredo1995"  	      	    -> configurando o usuario do git
               - git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
-              - git clone <https://nome-do-link>                            -> baixar o código-fonte existente de um repositório	      
+              - git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
               - git branch -M main                                          -> Criar branches do projeto
               - git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho do acesso ao github
               - git push -u origin main                                     -> confirmando o push
@@ -57,7 +57,7 @@ Comandos GIT's utilizados frequentemente
               - git branch -d <nome-da-branch>                              -> deletar as branches
               - git checkout <nome-da-branch>                               -> alternar de um branch para outro
               - git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
-	      - git reset --hard                                            -> desfazer alterações para resolver conflitos na branch
+	      - git reset --hard                                            -> desfazer alterações na branch com conflitos
               - git git add <arquivo>                                       -> para adicionar arquivos     
               - git add -A                                                  -> para adicionar tudo de uma vez
               - git pull <remote>                                           -> obter atualizações do repositório remoto
@@ -67,7 +67,7 @@ Comandos GIT's utilizados frequentemente
 	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou  CTRL + K + D   
 	      - comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
 	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
-	      - selecionar varios para alterar tudo vs code                 -> CTRL + D / repeti o comando pra ir selecionando
+	      - selecionar varios para alterar tudo vs code                 -> CTRL + D
 
 <br><br>     
  
