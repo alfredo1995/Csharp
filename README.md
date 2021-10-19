@@ -27,18 +27,19 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       
 <br><br>
 
-Subindo arquivos p/ um repositório no github
+Criando um repositorio
+
+	      - git init
+	      - git commit -m "first commit"
+	      - git branch -M main
+	      - git remote add origin https://github.com/alfredo1995/fdasd.git
+	      - git push -u origin main
+	      
+Subindo alterações na branch de um repositório existente no github
 
               - git init                                                     ->  iniciar project no git
-              - git status                                                   ->  ver as alterações no projeto
-              - git add --all                                                ->  add as alterações no projeto                                         
-              - git push -f                                                  ->  pra forçar o envio e salvar no repositório
-              - git commit -m "first commit"                                 ->  mensagem explicando a mudança no código
-
-Atualizando arquivos existente de um repositório no github
-
               - git status                                                   ->  ver alterações na branch
-              - git add .                                                    ->  adicionar as alterações no projeto
+              - git add .  ou git add --all                                  ->  adicionar as alterações no projeto
               - git commit -m "descriçãodocommit"                            ->  descrever o commit
               - git push -f                                                  ->  pra forçar o envio do arquivo pro git 
 
@@ -70,7 +71,6 @@ Comandos GIT's utilizados frequentemente
 
 <br><br>     
  
-
 Configuração do ambiente de desenvolvimento Local back e front end
 
 	1) clonar projetos Back e Front >
