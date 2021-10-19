@@ -29,45 +29,45 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
 Criando um repositorio
 
-	      - git init
-	      - git commit -m "first commit"
-	      - git branch -M main
-	      - git remote add origin https://github.com/alfredo1995/fdasd.git
-	      - git push -u origin main
+	- git init
+	- git commit -m "first commit"
+	- git branch -M main
+	- git remote add origin https://github.com/alfredo1995/fdasd.git
+	- git push -u origin main
 	      
 Subindo alterações na branch de um repositório existente no github
 
-              - git init                                                     ->  iniciar project no git
-              - git status                                                   ->  ver alterações na branch
-              - git add .  ou git add --all                                  ->  adicionar as alterações no projeto
-              - git commit -m "descriçãodocommit"                            ->  descrever o commit
-              - git push -f                                                  ->  pra forçar o envio do arquivo pro git 
+	- git init                                                     ->  iniciar project no git
+	- git status                                                   ->  ver alterações na branch
+	- git add .  ou git add --all                                  ->  adicionar as alterações no projeto
+	- git commit -m "descriçãodocommit"                            ->  descrever o commit
+	- git push -f                                                  ->  pra forçar o envio do arquivo pro git 
 
 Comandos GIT's utilizados frequentemente
 
-              - git config --global user.name "alfredo1995"  	      	    -> configurando o usuario do git
-              - git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
-              - git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
-              - git branch -M main                                          -> Criar branches do projeto
-              - git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho do acesso ao github
-              - git push -u origin main                                     -> confirmando o push
-              - git branch <nome-do-branch>                                 -> criar, listar e excluir branches
-              - git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
-              - git branch or git branch --list                             -> para ver as branches
-              - git branch -d <nome-da-branch>                              -> deletar as branches
-              - git checkout <nome-da-branch>                               -> alternar de um branch para outro
-              - git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
-	      - git reset --hard                                            -> desfazer alterações na branch com conflitos
-              - git git add <arquivo>                                       -> para adicionar arquivos     
-              - git add -A                                                  -> para adicionar tudo de uma vez
-              - git pull <remote>                                           -> obter atualizações do repositório remoto
-              - git merge <nome-da-branch>                                  -> mesclar as branches
-	      - cd NomeDaPasta                                              -> cd acessa a pasta
-	      - .. 							    -> dois pontos volta a pasta
-	      - arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou  CTRL + K + D   
-	      - comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
-	      - comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
-	      - selecionar varios para alterar tudo vs code                 -> CTRL + D
+	- git config --global user.name "alfredo1995"  	      	    -> configurando o usuario do git
+	- git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
+	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
+	- git branch -M main                                          -> Criar branches do projeto
+	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho do acesso ao github
+	- git push -u origin main                                     -> confirmando o push
+	- git branch <nome-do-branch>                                 -> criar, listar e excluir branches
+	- git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
+	- git branch or git branch --list                             -> para ver as branches
+	- git branch -d <nome-da-branch>                              -> deletar as branches
+	- git checkout <nome-da-branch>                               -> alternar de um branch para outro
+	- git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
+	- git reset --hard                                            -> desfazer alterações na branch com conflitos
+	- git git add <arquivo>                                       -> para adicionar arquivos     
+	- git add -A                                                  -> para adicionar tudo de uma vez
+	- git pull <remote>                                           -> obter atualizações do repositório remoto
+	- git merge <nome-da-branch>                                  -> mesclar as branches
+	- cd NomeDaPasta                                              -> cd acessa a pasta
+	- .. 							    -> dois pontos volta a pasta
+	- arrumar a indentação vs code e vs            		    -> SHIFT + ALT + F ou  CTRL + K + D   
+	- comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
+	- comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
+	- selecionar varios para alterar tudo vs code                 -> CTRL + D
 
 <br><br>     
  
