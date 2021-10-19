@@ -59,10 +59,7 @@ Comandos GIT's utilizados frequentemente
 	      - git reset --hard                                            -> desfazer alterações para resolver conflitos na branch
               - git git add <arquivo>                                       -> para adicionar arquivos     
               - git add -A                                                  -> para adicionar tudo de uma vez
-              - git push -u origin <nome-do-branch>                         -> upload do branch 
               - git pull <remote>                                           -> obter atualizações do repositório remoto
-              - git revert 'número do hash'                                 -> desfazer os commits
-              - git log -- oneline                                          -> número do hash
               - git merge <nome-da-branch>                                  -> mesclar as branches
 	      - cd NomeDaPasta                                              -> cd acessa a pasta
 	      - .. 							    -> dois pontos volta a pasta
@@ -127,45 +124,7 @@ Configuração do ambiente de desenvolvimento Local back e front end
 		
 <br><br>
 
-
-criar a branch no Azure DevOps
-
-	Repos > New Branch 
-	feature/AG/ID-NomeDaHistoria
-	basead on Develop
-	user story 322 
-	
-Subindo a branch na IDE
-	
-	Selecionei a feature no visual studio e o code
-	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-	
-	git brach
-	git fetch 	
-	git pull
-	git checkout -b feature/AG/322-modal-cancelamento-imovel
-
-Subindo a branch 
-
-	git fetch 
-	git status
-	git add .
-	git commit -m ""
-	git push
-
-subindo as alterações nos campos da aplicação
-
-	git status 
-	git merge 
-	git commit "descricao"
-        git push
-	  	      
-
-<br><br><br><br>
-
-
-
-Etapas de desenvolvimento das task referente a Sprint
+Etapas de desenvolvimento das task referente a Sprint de teste
 
 	Implementando os requisitos da task
 	
@@ -180,33 +139,31 @@ criar roteiro de teste
 	Dado que o usuário acesse o Relatorio Planejamento Coletivos
 	Quando carregar a tabela do Relatorio Planejamento Coletivos
 	Então serão listadas apenas as Modalidades: Coletivo bento e Coletivo Paracutu
-
-adicioanar o roteiro de teste da develop no Azure DevOps 
-
-	validação do roteiro de teste
 	
-criar a branch do front e back
+criando a branch no Azure DevOps
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
-	seleciona a branch a ser criada na develop
+	basead on Develop
+	user story ID 
 		
 puxando a branch
-
-	selecionei a branch (feature) no visual studio e o code
-	remotes > no lugar de devolop vai ser feature/AG/ID-NomeDaHistoria
-	git checkout <nome-da-branch>
-	git fetch 
+	
+	Selecionei a feature no visual studio e o code
+	remotes > selecionar a branch criada feature/AG/ID-NomeDaHistoria
+	
+	git branch
+	git fetch 	
 	git pull
+	git checkout -b feature/AG/322-modal-cancelamento-imovel
 	
 subindo a alterações
 	
-	Update-Database
-	ctrl + shift + b
-	adcionar todas as alteraçores em preparação	
-	git status 
+	git fetch 
+	git status
+	git add .
 	git commit -m "initial commit"
-        git push ou git merge
+	git push ou git merge
 	
 requesito da task
 
