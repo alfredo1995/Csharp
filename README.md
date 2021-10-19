@@ -39,9 +39,9 @@ Subindo alterações na branch de um repositório existente no github
 
 	- git init                                                     ->  iniciar project no git
 	- git status                                                   ->  ver alterações na branch
-	- git add .  ou git add --all                                  ->  adicionar as alterações no projeto
+	- git add .  ou git add --all                                  ->  adicionando alterações
 	- git commit -m "descriçãodocommit"                            ->  descrever o commit
-	- git push -f                                                  ->  forçar o envio do arquivo pro git 
+	- git push -f                                                  ->  forçar envio pro git 
 
 Comandos GIT's utilizados frequentemente
 
