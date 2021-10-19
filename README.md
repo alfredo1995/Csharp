@@ -57,10 +57,10 @@ Comandos GIT's utilizados frequentemente
 	- git branch -d <nome-da-branch>                              -> deletar as branches
 	- git checkout <nome-da-branch>                               -> alternar de um branch para outro
 	- git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
-	- git reset --hard                                            -> desfazer alterações na branch com conflitos
+	- git reset --hard                                            -> desfazer alterações branch com conflito
 	- git git add <arquivo>                                       -> para adicionar arquivos     
 	- git add -A                                                  -> para adicionar tudo de uma vez
-	- git pull <remote>                                           -> obter atualizações do repositório remoto
+	- git pull <remote>                                           -> obter atualizações repositório remoto
 	- git merge <nome-da-branch>                                  -> mesclar as branches
 	- cd NomeDaPasta                                              -> cd acessa a pasta
 	- .. 							      -> dois pontos volta a pasta
