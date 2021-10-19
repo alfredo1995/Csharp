@@ -68,7 +68,7 @@ Comandos GIT's utilizados frequentemente
 	- comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
 	- comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
-	- prop e aperta duas vezes tab                                -> cria um atributo de class
+	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
 <br><br>     
  
