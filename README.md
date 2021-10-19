@@ -165,7 +165,7 @@ subindo a alterações
 	git commit -m "initial commit"
 	git push ou git merge
 	
-requesito da task
+requesito 1 da task
 
 	Deverão ser incluídos os campos:
 		
@@ -175,7 +175,7 @@ requesito da task
 		Data Programada/Realizada (Date Time)
 		ID Exclusivo do Project (int)
 
-implementando os requisitos da historia na sprint
+implementando requisito 1 da sprint
 
 	criando o objeto em ExecucaoObraEdificacao.cs
 
@@ -281,8 +281,6 @@ implementando requisito no foreach para que apenas retorne os atendimentos colet
 
             }	
 		
-
-
 	
 3.1) requisito de calculo do status (id) de cada objeto
 
@@ -347,7 +345,6 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
 
 
 <br><br><br><br>
-
 
 requisito 1
 
