@@ -41,7 +41,7 @@ Subindo alterações na branch de um repositório existente no github
 	- git status                                                   ->  ver alterações na branch
 	- git add .  ou git add --all                                  ->  adicionar as alterações no projeto
 	- git commit -m "descriçãodocommit"                            ->  descrever o commit
-	- git push -f                                                  ->  pra forçar o envio do arquivo pro git 
+	- git push -f                                                  ->  forçar o envio do arquivo pro git 
 
 Comandos GIT's utilizados frequentemente
 
