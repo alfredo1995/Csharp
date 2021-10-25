@@ -209,6 +209,8 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade Execuca
 	
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
+	
+<br><br>  
 
 requisito 2 da task
 
@@ -263,7 +265,8 @@ implementando requisito no foreach para que apenas retorne os atendimentos colet
 
             }	
 		
-	
+<br><br>  
+
 requisito 3 de calculo do status (id) de cada objeto
 
 	% do avanço = 0 ("Não iniciado") 
@@ -337,6 +340,7 @@ alterando o nome da propriedade do obj da entidade atendimentoSocial-modal-statu
             Data de Formalização da Alteração<span class="symbol required"></span>
          </label>
 
+<br><br>  
 
 requisito 6 da task
 
@@ -385,6 +389,7 @@ controleRevisaoatendimentosocialappservico.cs
             };
         }
 
+<br><br>  
 
 requisito 7 da task
 
@@ -409,6 +414,7 @@ atendimentosocail.cs
             }
         }
 
+<br><br>  
 
 requisito 8 da task
 
