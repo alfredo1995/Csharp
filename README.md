@@ -115,15 +115,10 @@ Configuração do ambiente de desenvolvimento Local back e front end
 		WHERE Usuario_Id = 142
 
 		INSERT INTO MembroDoPerfil VALUES (27, 143)
-	
 		
 <br><br>
 
-Etapas de desenvolvimento das task referente a Sprint de teste
-
-	Implementando os requisitos da task
-	
-criar roteiro de teste
+roteiro de teste de desenvolvimento das task referente a task da Sprint
 
 	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
 	Dado que o usuário acesse o Relatorio Planejamento Coletivos
@@ -170,11 +165,7 @@ requesito 1 da task
 		Data Programada/Realizada (Date Time)
 		ID Exclusivo do Project (int)
 
-implementando requisito 1 da sprint
-
-	criando o objeto em ExecucaoObraEdificacao.cs
-
-criando a propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
+implementando requisito 1 , criando propriedade do objeto(tipo enum) na entidade ExecucaoObraEdificacao.cs
 
 	public StatusExecucaoObraEdificacao Status_Do_Processo { get; set; }
         public const bool status_do_processo_obrigatorio = false;
@@ -219,17 +210,13 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade Execuca
 	//instanciando objeto
 	Status_Do_Processo = this.Status_Do_Processo,
 
-2.1) requisito
+requisito 2 da task
 
 	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
 	Coletivo Bento
 	Coletivo Paracatu
 
-2.1) implementando requesito acessando a controller da entidade
-
-	atendimentosocialcontroller.cs  
-
-acessar a rota da entidade
+mplementando requesito 2 acessando a controller da entidade  atendimentosocialcontroller.cs  
 
 	[Route("relatorioPlanejamentoSocial")]
 
@@ -277,13 +264,13 @@ implementando requisito no foreach para que apenas retorne os atendimentos colet
             }	
 		
 	
-3.1) requisito de calculo do status (id) de cada objeto
+requisito 3 de calculo do status (id) de cada objeto
 
 	% do avanço = 0 ("Não iniciado") 
 	% do avanço entre 1 e 99% ("Em andamento")
 	% do avanço = 100% ("Finalizado")
 
-3.1) implementando requisito de calculo no back end
+implementando requisito 3 de calculo no back end
 
 	por padrão recebe get e usa set para setar os atributos
 	para implementar uma função altera o metodo set pela função
@@ -316,16 +303,15 @@ implementando a função de calculo do status no back end ( ExecucaoObraEdificac
         }
 
 
-<br><br><br><br>
-
+<br><br>
 	
-Segundo requisito da Task
+requisito  4 da Task
 
 	StatusAquisicaoImovel  que devem ser criados:
      	   Manifestacaoo De Interesse Técnicos
       	   Selecionado
 
-implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.cs
+implementação requisito 4 da Task> Back end > StatusAquisicaoImovel.cs
 	
 	StatusAquisicaoImovel.cs > adicionar nova propriedade AnaliseDocumental = 8 no Enum 
 	
@@ -339,9 +325,9 @@ implementação do segundo requisito da Task> Back end > StatusAquisicaoImovel.c
           Adquirido = 5,         }}
 
 
-<br><br><br><br>
+<br><br>
 
-requisito 1
+requisito 5 da task
 
 	Renomear o campo de data para “Data de Formalização da Alteração”. A data que o usuário fez a alteração também deverá ser salva no sistema e ficar disponível no relatório de dados históricos;
 	
@@ -352,7 +338,7 @@ alterando o nome da propriedade do obj da entidade atendimentoSocial-modal-statu
          </label>
 
 
-requisito 2/1
+requisito 6 da task
 
 	O sistema deverá listar automaticamente o usuário logado como Responsável pela alteração.
 
@@ -400,7 +386,7 @@ controleRevisaoatendimentosocialappservico.cs
         }
 
 
-requisito 3 
+requisito 7 da task
 
 	Campo Novo Status: excluir as categorias: Aquisicao_Imovel DefinicaoDeLote AguardandoFicha atendimentosocial.cs 
 
@@ -424,3 +410,22 @@ atendimentosocail.cs
         }
 
 
+requisito 8 da task
+
+	Exibir campo de Data de Cancelamento obrigatório. Data deverá ser lançada manualmente,
+	uma vez que será considerada a data da evidência (ng-class e span-class)
+	
+implementando requisito 8 
+
+	       <div class="form-group col-md-12 margin-top-10"
+                ng-class="{'has-error':formAtendimentoSocialModalStatus.DataCancelamentoImovel.$dirty && formAtendimentoSocialModalStatus.DataCancelamentoImovel.$invalid, 'has-success':formAtendimentoSocialModalStatus.DataCancelamentoImovel.$valid}">
+                <label class="control-label">
+                    Data de Cancelamento<span class="symbol required"></span>
+                </label>
+                <input type="date"
+                    class="form-control"
+                    name="Data"
+                    required
+                    ng-model="controller.entidade.DataCancelamentoImovel">
+                <span class="error text-small block" ng-if="formAtendimentoSocialModalStatus.DataCancelamentoImovel.$dirty && formAtendimentoSocialModalStatus.DataCancelamentoImovel.$error.required">Data é obrigatório</span>
+            </div>
