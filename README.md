@@ -440,16 +440,7 @@ aquisicaoImovel-form-ctrl.js
 
 	_vm.dados.entidade.CancelamentoImovel = registro.CancelamentoImovel;
 	
-implementando requisito 8 da task (back end)
-
-
-
-requisito 9 da task 
-
-	Incluir campo de [Data de Cancelamento] no relatório “Planejamento Social RF”, 
-	após [Situação do Imóvel]
-
-implementando requisito 9 AquisicaoImovel.cs
+implementando requisito 8 AquisicaoImovel.cs (back)
 
         public DateTime? DataCancelamentoImovel { get; set; }
         public const bool DataCancelamentoImovel_Obrigatorio = false;
@@ -471,6 +462,50 @@ AquisicaoImovelConfiguracao.cs
      if (AquisicaoImovel.DataCancelamentoImovel_Obrigatorio) Property(c => c.DataCancelamentoImovel).IsRequired();
      else Property(c => c.DataCancelamentoImovel).IsOptional();
 
+requisito 9 da task 
+
+	Incluir campo de [Data de Cancelamento] no relatório “Planejamento Social RF”, 
+	após [Situação do Imóvel]
+	
+implementando requisito 9 da task ( relatorioPlanejamentoFamiliar.ctrl.js )
+
+            { Label: 'Data de Cancelamento do Imóvel', Id: 43 }
+
+            entidade.Aquisicoes[0].DataCancelamentoImovel = entidade.Aquisicoes[0].DataCancelamentoImovel ? 
+	    dataSemHora(entidade.Aquisicoes[0].DataCancelamentoImovel) : null
+	    
+relatorioPlanejamentoFamiliar.ctrl.js * function filtrarPorPeriodo
+
+             case 43:
+             atendimentosFiltrados = _vm.atendimentosArray.filter(function (atendimento) {
+             return atendimento.Aquisicoes[0].DataCancelamentoImovel >= dataInicial &&
+             atendimento.Aquisicoes[0].DataCancelamentoImovel <= dataFinal;});
+	     
+relatorioPlanejamentoFamiliar.ctrl.js * function filtrarMenorQue
+
+             case 43:
+             atendimentosFiltrados = _vm.atendimentosArray.filter(function (atendimento) {
+             return atendimento.Aquisicoes[0].DataCancelamentoImovel <= DataCancelamentoImovel; });
+             _vm.dados.tabela.data = atendimentosFiltrados;
+	   
+relatorioPlanejamentoFamiliar.ctrl.js * function filtrarMaiorQue
+
+             case 43:
+             atendimentosFiltrados = _vm.atendimentosArray.filter(function (atendimento) {
+             return atendimento.Aquisicoes[0].DataCancelamentoImovel >= DataCancelamentoImovel  });
+             _vm.dados.tabela.data = atendimentosFiltrados;
+
+relatorioPlanejamentoFamiliar.ctrl.js * function definicaoDeColunas
+
+	      ,{
+	      name: 'Data de Cancelamento do Imóvel ',
+              field: 'Aquisicoes[0].DataCancelamentoImovel',
+              enableCellEdit: false,
+              allowCellFocus: true,
+              width: 200,
+              visible: true,
+              cellFilter: 'date:"dd/MM/yyyy"'
+	      ,}
 
 
 
