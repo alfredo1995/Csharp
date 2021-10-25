@@ -462,6 +462,8 @@ AquisicaoImovelConfiguracao.cs
      if (AquisicaoImovel.DataCancelamentoImovel_Obrigatorio) Property(c => c.DataCancelamentoImovel).IsRequired();
      else Property(c => c.DataCancelamentoImovel).IsOptional();
 
+<br><br>
+
 requisito 9 da task 
 
 	Incluir campo de [Data de Cancelamento] no relatório “Planejamento Social RF”, 
