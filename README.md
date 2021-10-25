@@ -2,7 +2,6 @@ Capaz de desenvolver programas com a linguagem C#
 
 Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos
 
-
       1) Introdução - algoritmos, estrutura de dados e introdução ao .NET framework;  
 
       2) Configuração do Ambiente - Os passos necessários para configurar o computador para executar o C#;
@@ -21,13 +20,11 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
     
       9) Exceções - Quando os erros ocorrem entram em cenas as exceções e as técnicas de tratamento de erro;
 
-     10) Explorando API - Aprenderemos a mexer com arquivos, datas e intervalos de datas; 
-
-     11) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;
+     10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;
       
 <br><br>
 
-Criando um repositorio
+Criando um repositorio no GitHub
 
 	- git init
 	- git commit -m "first commit"
@@ -45,28 +42,25 @@ Subindo alterações na branch de um repositório existente no github
 
 Comandos GIT's utilizados frequentemente
 
-	- git config --global user.name "alfredo1995"  	      	      -> configurando o usuario do git
-	- git config --global user.email "alfredogomes1995@gmail.com" -> configurando o email do usuario do git
+	- git config --global user.name "alfredo1995"  	      	      -> configura o nome  do usuario no git
+	- git config --global user.email "alfredogomes1995@gmail.com" -> configura o email do usuario no git
 	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
 	- git branch -M main                                          -> Criar branches do projeto
-	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho do acesso ao github
-	- git push -u origin main                                     -> confirmando o push
-	- git branch <nome-do-branch>                                 -> criar, listar e excluir branches
-	- git push -u <remote> <nome-da-branch>                       -> criará uma branch localmente
+	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso ao github
+	- git push -u origin main                                     -> confirma o push
 	- git branch or git branch --list                             -> para ver as branches
 	- git branch -d <nome-da-branch>                              -> deletar as branches
 	- git checkout <nome-da-branch>                               -> alternar de um branch para outro
 	- git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
 	- git reset --hard                                            -> desfazer alterações branch com conflito
-	- git git add <arquivo>                                       -> para adicionar arquivos     
 	- git add -A                                                  -> para adicionar tudo de uma vez
 	- git pull <remote>                                           -> obter atualizações repositório remoto
 	- git merge <nome-da-branch>                                  -> mesclar as branches
 	- cd NomeDaPasta                                              -> cd acessa a pasta
 	- .. 							      -> dois pontos volta a pasta
 	- arrumar a indentação vs code e vs            		      -> SHIFT + ALT + F ou  CTRL + K + D   
-	- comentar e descomentar visual studio                        -> CTRL + K + C    /   CRTL + K + U
-	- comentar e descomentar visual studio                        -> CTRL + SHIFT + A /  SHIFT + Alt + A
+	- comentar e descomentar visual studio e code                 -> CTRL + K + C    /   CRTL + K + U
+	- comentar e descomentar visual studio e code                 -> CTRL + SHIFT + A /  SHIFT + Alt + A
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
 	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
