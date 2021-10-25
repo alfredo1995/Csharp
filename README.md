@@ -421,7 +421,7 @@ requisito 8 da task
 	Exibir campo de Data de Cancelamento obrigatório. Data deverá ser lançada manualmente,
 	uma vez que será considerada a data da evidência (ng-class e span-class)
 	
-implementando requisito 8 
+implementando requisito 8 aquisicaoImovel-modal-status.html
 
 	       <div class="form-group col-md-12 margin-top-10"
                 ng-class="{'has-error':formAtendimentoSocialModalStatus.DataCancelamentoImovel.$dirty && formAtendimentoSocialModalStatus.DataCancelamentoImovel.$invalid, 'has-success':formAtendimentoSocialModalStatus.DataCancelamentoImovel.$valid}">
@@ -435,3 +435,44 @@ implementando requisito 8
                     ng-model="controller.entidade.DataCancelamentoImovel">
                 <span class="error text-small block" ng-if="formAtendimentoSocialModalStatus.DataCancelamentoImovel.$dirty && formAtendimentoSocialModalStatus.DataCancelamentoImovel.$error.required">Data é obrigatório</span>
             </div>
+
+aquisicaoImovel-form-ctrl.js
+
+	_vm.dados.entidade.CancelamentoImovel = registro.CancelamentoImovel;
+	
+implementando requisito 8 da task (back end)
+
+
+
+requisito 9 da task 
+
+	Incluir campo de [Data de Cancelamento] no relatório “Planejamento Social RF”, 
+	após [Situação do Imóvel]
+
+implementando requisito 9 AquisicaoImovel.cs
+
+        public DateTime? DataCancelamentoImovel { get; set; }
+        public const bool DataCancelamentoImovel_Obrigatorio = false;
+	
+AquisicaoImovelResponse.cs, setando o objeto e injetando no construtor
+
+        public DateTime? DataCancelamentoImovel { get; set; }
+
+        DataCancelamentoImovel = obj.DataCancelamentoImovel;
+
+AquisicacaoImovelAlteracaoStatusRequest.cs, setando o objeto e injetando no construtor
+
+        public DateTime? DataCancelamentoImovel { get; set; }
+	
+	DataCancelamentoImovel = DataCancelamentoImovel,
+
+AquisicaoImovelConfiguracao.cs
+
+     if (AquisicaoImovel.DataCancelamentoImovel_Obrigatorio) Property(c => c.DataCancelamentoImovel).IsRequired();
+     else Property(c => c.DataCancelamentoImovel).IsOptional();
+
+
+
+
+
+
