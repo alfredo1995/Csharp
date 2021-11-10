@@ -65,58 +65,6 @@ Comandos GIT's utilizados frequentemente
 	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
 <br><br>     
- 
-Configuração do ambiente de desenvolvimento Local back e front end
-
-	1) clonar projetos Back e Front >
-		Azure DevOps> Repos > Clonar ( back e front ) 
-		Criar pasta Projeto> terminal git bash> git clone "endereçoProjetoASerClonado"
-		
-	3) inicialização do front end > 		
-		baixar depedencia do Front end Packages
-		vs code> terminal : npm start
-
-	4) Configuração do back end >
-		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
-		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
-		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
-		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel se necessario
-		console gerenciador  > Update-Database -Verbose
-		Definir a Api como projeto de inicialização > Limpar solução > ctrl + shift + b = copilar 
-
-	5) Conexão com o banco de dados >
-		Azure DevOps > Dowloado do banco de dados Renova
-		SQL Server > Nome do servidor: (localdb)\MSSQLLocalDB > autenticação windows
-		botao direito em cima do "banco de dados" > importar banco SQL Renova
-		Conexão com a Conecte string > web.config > "nome da string de conexao"
-
-	6) Inicialização do back end >
-		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
-		terminal nuget > selecionar> projeto padrao : PROJETO.Infra.Dados
-		terminal nuget > Update-Database -Verbose -f 
-		Depuração : shift + f5
-		
-	7) cadastrar novos usuario
-		backend entidade Atributo e Autenticação > Descomente o “return true”.
-		F5 > abrir o Swagger > usuario > geral usuario post > modelo de parameters
-		
-		{
-		  "Email": "alfredo.gomes@ketra.com.br",
-		  "Nome": "Alfredo Gomes",
-		  "Senha": "ketra123",
-		  "PrimeiroAcesso": true,
-		}	
-		
-	8) Criando consulta para registros de novos Membros do Perfil no banco de dados
-	
-		SELECT *  FROM Usuarios
-		
-		SELECT *  FROM MembroDoPerfil
-		WHERE Usuario_Id = 142
-
-		INSERT INTO MembroDoPerfil VALUES (27, 143)
-		
-<br><br>
 
 criando a branch no Azure DevOps
 
@@ -511,5 +459,55 @@ relatorioPlanejamentoFamiliar.ctrl.js * function definicaoDeColunas
 
 
 
+<br>L<br><br>
 
+Configuração do ambiente de desenvolvimento Local back e front end
+
+	1) clonar projetos Back e Front >
+		Azure DevOps> Repos > Clonar ( back e front ) 
+		Criar pasta Projeto> terminal git bash> git clone "endereçoProjetoASerClonado"
+		
+	3) inicialização do front end > 		
+		baixar depedencia do Front end Packages
+		vs code> terminal : npm start
+
+	4) Configuração do back end >
+		Ferramentas > Pacotes Nuget > Configurações pacote Nuget
+		Adicionar um novo > Nome: nuget.org  Origem: https://api.nuget.org/v3/index.json
+		Ferramentas > Pacotes Nuget > Gerenciador pacotes Nuget > restaurar	
+		Pacote Nuget> Instalar o office ou a dependência Microsoft.interop.excel se necessario
+		console gerenciador  > Update-Database -Verbose
+		Definir a Api como projeto de inicialização > Limpar solução > ctrl + shift + b = copilar 
+
+	5) Conexão com o banco de dados >
+		Azure DevOps > Dowloado do banco de dados Renova
+		SQL Server > Nome do servidor: (localdb)\MSSQLLocalDB > autenticação windows
+		botao direito em cima do "banco de dados" > importar banco SQL Renova
+		Conexão com a Conecte string > web.config > "nome da string de conexao"
+
+	6) Inicialização do back end >
+		vs 2019> Projeto Back End > Solução > Definir API como Projeto de inicialização
+		terminal nuget > selecionar> projeto padrao : PROJETO.Infra.Dados
+		terminal nuget > Update-Database -Verbose -f 
+		Depuração : shift + f5
+		
+	7) cadastrar novos usuario
+		backend entidade Atributo e Autenticação > Descomente o “return true”.
+		F5 > abrir o Swagger > usuario > geral usuario post > modelo de parameters
+		
+		{
+		  "Email": "alfredo.gomes@7070.com.br",
+		  "Nome": "Alfredo Gomes",
+		  "Senha": "7070",
+		  "PrimeiroAcesso": true,
+		}	
+		
+	8) Criando consulta para registros de novos Membros do Perfil no banco de dados
+	
+		SELECT *  FROM Usuarios
+		
+		SELECT *  FROM MembroDoPerfil
+		WHERE Usuario_Id = 142
+
+		INSERT INTO MembroDoPerfil VALUES (27, 143)
 
