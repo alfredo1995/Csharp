@@ -16,7 +16,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
       7) Orientação a Objetos - Os pilares das Orientação a Objetos e como aplicar na prática;
 
-      8) Métodos e Funções - C# suporte recursos do mundo do funcional, funções, lambdas e métodos
+      8) Métodos e Funções - C# tb suporte recursos do mundo do funcional, funções, lambdas e métodos
     
       9) Exceções - Exceções e as técnicas de tratamento de erro
 
