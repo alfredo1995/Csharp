@@ -118,18 +118,6 @@ Configuração do ambiente de desenvolvimento Local back e front end
 		
 <br><br>
 
-roteiro de teste de desenvolvimento das task referente a task da Sprint
-
-	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
-	Dado que o usuário acesse o Relatorio Planejamento Coletivos
-	Quando o usuário visualizar o Relatorio Planejamento Coletivos
-	Então será visualizado a coluna Atendimento Coletivo, após “Id Auto Delimitação”;
-
-	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
-	Dado que o usuário acesse o Relatorio Planejamento Coletivos
-	Quando carregar a tabela do Relatorio Planejamento Coletivos
-	Então serão listadas apenas as Modalidades: Coletivo bento e Coletivo Paracutu
-	
 criando a branch no Azure DevOps
 
 	Repos > New Branch 
@@ -153,7 +141,19 @@ subindo a alterações
 	git status
 	git add .
 	git commit -m "initial commit"
-	git push ou git merge
+	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
+	
+roteiro de teste de desenvolvimento das task referente a task da Sprint
+
+	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
+	Dado que o usuário acesse o Relatorio Planejamento Coletivos
+	Quando o usuário visualizar o Relatorio Planejamento Coletivos
+	Então será visualizado a coluna Atendimento Coletivo, após “Id Auto Delimitação”;
+
+	Cenário: Usuário acessa o Relatorio Planejamento Coletivos
+	Dado que o usuário acesse o Relatorio Planejamento Coletivos
+	Quando carregar a tabela do Relatorio Planejamento Coletivos
+	Então serão listadas apenas as Modalidades: Coletivo bento e Coletivo Paracutu
 	
 requesito 1 da task
 
