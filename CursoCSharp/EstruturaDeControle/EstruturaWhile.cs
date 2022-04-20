@@ -10,7 +10,6 @@ namespace CursoCSharp.EstruturaDeControle
     {
         public static void Executar()
         {
-            //
             int palpite = 0;
             // criar um valor aleatorio emcima da class Random
             Random random = new Random();
