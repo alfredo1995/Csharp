@@ -27,7 +27,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 Criando um repositorio no GitHub
 
 	- git init
-	- git commit -m "first commit"
+	- git commit -m "first commit" 
 	- git branch -M main
 	- git remote add origin https://github.com/alfredo1995/fdasd.git
 	- git push -u origin main
