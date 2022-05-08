@@ -22,6 +22,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
      10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc; 
       
+     11) Playlist no meu canal do youtube explicando cada exercicio: https://www.youtube.com/watch?v=PFRrl46Pnk0&list=PLk7LclgP8e9oIOKH7WRXt9pBlkl7Tnun1
 <br>
 
 Criando um repositorio no GitHub
