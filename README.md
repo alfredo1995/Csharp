@@ -160,7 +160,7 @@ setando a propriedade do objeto(tipo enum(null)) no resquest da entidade Execuca
 	Status_Do_Processo = this.Status_Do_Processo,
 	
 <br><br>  
-
+ 
 requisito 2 da task
 
 	Exibir somente os atendimentos relacionados às seguintes Modalidades: 
