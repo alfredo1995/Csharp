@@ -17,7 +17,7 @@ namespace CursoCSharp.TopicosAvancados
     {
         public static void Executar()
         {
-            //setando a class aluno acima
+            //1° FONTE DE DADOS
             var alunos = new List<Aluno> {
                 new Aluno() {Nome = "Pedro", Idade = 24, Nota = 8.0 },
                 new Aluno() {Nome = "Andre", Idade = 21, Nota = 4.3 },
@@ -27,17 +27,20 @@ namespace CursoCSharp.TopicosAvancados
                 new Aluno() {Nome = "Julia", Idade = 22, Nota = 7.5 },
                 new Aluno() {Nome = "Marcio", Idade = 18, Nota = 6.8 }
             };
-
+            
+            // 2° CRIANDO MINHA CONSULTA LINQ
             Console.WriteLine("== Aprovados ===============");
-            //Where(a => a.Nota >= 7) Lambda gerando uma nova lista filtrada com where(passando parametro de filtro)- OrderBy(ordem da lista)
             var aprovados = alunos.Where(a => a.Nota >= 7)
                 .OrderBy(a => a.Nome);
-            //varendo os atributos do objeto com foreach p/ exibir na tela
+
+            // 3° EXECUTANDO MINHA CONSULTA
             foreach (var aluno in aprovados)
             {
                 Console.WriteLine(aluno.Nome);
             }
 
+            // FIM :)
+            
             Console.WriteLine("\n== Chamada ===============");
             var chamada = alunos.OrderBy(a => a.Nome).Select(a => a.Nome);
             foreach (var aluno in chamada)
