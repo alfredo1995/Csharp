@@ -32,7 +32,7 @@ Criando um repositorio no GitHub
 	- git branch -M main
 	- git remote add origin https://github.com/alfredo1995/fdasd.git
 	- git push -u origin main
-	      
+	       
 Subindo alterações na branch de um repositório existente no github
 
 	- git init                                                     ->  iniciar project no git
