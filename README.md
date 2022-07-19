@@ -19,7 +19,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       8) Métodos e Funções - C# tb suporte recursos do mundo do funcional, funções, lambdas e métodos
     
       9) Exceções - Exceções e as técnicas de tratamento de erro
-
+ 
      10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc; 
       
      11) https://www.youtube.com/watch?v=Vndh9cdkUOA&list=PLk7LclgP8e9oIOKH7WRXt9pBlkl7Tnun1&index=31
