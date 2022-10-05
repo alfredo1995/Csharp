@@ -67,7 +67,7 @@ Comandos GIT's utilizados frequentemente
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
 	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
-<br><br><br><br>
+<br><br><br>
 
 criando a branch no Azure DevOps
 
