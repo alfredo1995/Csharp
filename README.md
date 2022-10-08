@@ -46,7 +46,7 @@ Comandos GIT's utilizados frequentemente
 	- git config --global user.email "alfredogomes1995@gmail.com" -> configura o email do usuario no git
 	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
 	- git branch -M main                                          -> Criar branches do projeto
-	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso ao github
+	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso github
 	- git push -u origin main                                     -> confirma o push
 	- git branch or git branch --list                             -> para ver as branches
 	- git branch -d <nome-da-branch>                              -> deletar as branches
@@ -58,9 +58,9 @@ Comandos GIT's utilizados frequentemente
 	- git merge <nome-da-branch>                                  -> mesclar as branches
 	- cd NomeDaPasta                                              -> cd acessa a pasta
 	- .. 							      -> dois pontos volta a pasta
-	- arrumar a indentação vs code e vs            		      -> SHIFT + ALT + F ou  CTRL + K + D   
-	- comentar e descomentar visual studio e code                 -> CTRL + K + C    /   CRTL + K + U
-	- comentar e descomentar visual studio e code                 -> CTRL + SHIFT + A /  SHIFT + Alt + A
+	- arrumar a indentação vs code e vs            		      -> SHIFT + ALT + F ou CTRL + K + D   
+	- comentar e descomentar visual studio e code                 -> CTRL + K + C    /  CRTL + K + U
+	- comentar e descomentar visual studio e code                 -> CTRL + SHIFT + A / SHIFT + Alt + A
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
 	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
