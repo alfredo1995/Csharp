@@ -22,7 +22,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
  
      10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc; 
       
-<br>
+<br><br>
 
 Criando um repositorio no GitHub
 
@@ -64,7 +64,7 @@ Comandos GIT's utilizados frequentemente
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
 	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
-<br><br><br>
+<br><br>
 
 criando a branch no Azure DevOps
 
@@ -81,7 +81,7 @@ puxando a branch
 	git branch
 	git fetch 	
 	git pull
-	git checkout -b feature/AG/322-modal-cancelamento-imovel
+	git checkout -b feature/AG/322-NomeDaHistoria
 	
 subindo a alterações
 	
