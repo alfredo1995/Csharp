@@ -22,10 +22,8 @@ namespace CursoCSharp.ClassesEMetodos
             int id = (int)Genero.Animacao;
             Console.WriteLine(id);
 
-            ///criar variavel
             var filmeParaFamilia = new Filme();
 
-            //setando atribuindo da variavel criada acima
             filmeParaFamilia.Titulo = "Efeito Borboleta";
             filmeParaFamilia.GeneroDoFilme = Genero.Comedia;
 
