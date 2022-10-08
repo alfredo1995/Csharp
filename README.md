@@ -42,8 +42,8 @@ Subindo alterações na branch de um repositório existente no github
 
 Comandos GIT's utilizados frequentemente
 
-	- git config --global user.name "alfredo1995"  	      	      -> configura o nome do usuario no git
-	- git config --global user.email "alfredogomes1995@gmail.com" -> configura email do usuario no git
+	- git config --global user.name "alfredo1995"  	      	      -> configura o nome do usuario git
+	- git config --global user.email "alfredogomes1995@gmail.com" -> configura email do usuario git
 	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
 	- git branch -M main                                          -> Criar branches do projeto
 	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso github
@@ -60,9 +60,9 @@ Comandos GIT's utilizados frequentemente
 	- .. 							      -> dois pontos volta a pasta
 	- arrumar a indentação vs code e vs            		      -> SHIFT + ALT + F ou CTRL + K + D   
 	- comentar e descomentar visual studio e code                 -> CTRL + K + C    /  CRTL + K + U
-	- comentar e descomentar visual studio e code                 -> CTRL + SHIFT + A / SHIFT + Alt + A
+	- comentar e descomentar visual studio e code                 -> CTRL+SHIFT+A / SHIFT+Alt+A
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
-    - prop, aperta duas vezes tab                                 -> cria um atributo de class
+    	- prop, aperta duas vezes tab                                 -> cria um atributo de class
 
 <br><br>
 
