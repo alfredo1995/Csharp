@@ -4,22 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//entro na class e uso o enum pra ser uns do tipo de atributo dessa class
 namespace CursoCSharp.ClassesEMetodos
 {
     class Enumeracoes
     {
-        //criando um tipo enum Genero 
         public enum Genero { Acao, Aventura, Terror, Animacao, Comedia};
 
-        //criando um class q vai ter entre seus atributos o tipo enum
         public class Filme
         {
             public string Titulo;
             public Genero GeneroDoFilme;
         }
 
-        //acessar o enum
         public static void Executar()
         {
             // cash - convert enum p/ int
