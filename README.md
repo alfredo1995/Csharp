@@ -42,8 +42,8 @@ Subindo alterações na branch de um repositório existente no github
 
 Comandos GIT's utilizados frequentemente
 
-	- git config --global user.name "alfredo1995"  	      	      -> configura o nome  do usuario no git
-	- git config --global user.email "alfredogomes1995@gmail.com" -> configura o email do usuario no git
+	- git config --global user.name "alfredo1995"  	      	      -> configura o nome do usuario no git
+	- git config --global user.email "alfredogomes1995@gmail.com" -> configura o email do usuario git
 	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
 	- git branch -M main                                          -> Criar branches do projeto
 	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso github
