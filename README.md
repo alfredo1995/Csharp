@@ -66,7 +66,7 @@ Comandos GIT's utilizados frequentemente
 
 <br><br>
 
-criando a branch no Azure DevOps
+criando a branch no Azure DevOps 
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
