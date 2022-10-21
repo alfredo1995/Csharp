@@ -14,7 +14,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
       6) Coleções - Estruturas de dados serão abordadas: array, listas, filas, pilhas, dicionários
 
-      7) Orientação a Objetos - Os pilares das Orientação a Objetos e como aplicar na prática;
+      7) Orientação a Objetos - Os pilares das Orientação a Objetos e como aplicar na prática; 
 
       8) Métodos e Funções - C# tb suporte recursos do mundo do funcional, funções, lambdas e métodos
     
