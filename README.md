@@ -20,7 +20,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
     
       9) Exceções - Exceções e as técnicas de tratamento de erro
  
-     10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;  
+     10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;   
       
 <br><br>
  
