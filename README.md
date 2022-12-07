@@ -91,3 +91,13 @@ subindo a alterações
 	git commit -m "initial commit"
 	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
 	
+	
+criando a branch no GitLab
+
+	GitHub desktop > file > clone repository
+	GitLab > copiar url https > colar no clone repository do GitHub Desktop
+	GitHub Desktop > Current Branch > Dev
+	GitHub Desktop > Current Branch > New Branch > name > select dev > Public branch
+	
+	
+	
