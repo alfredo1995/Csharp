@@ -66,7 +66,7 @@ Comandos GIT's utilizados frequentemente
 
 <br><br>
 
-criando a branch no Azure DevOps 
+criando a branch no Azure DevOps com GitBash
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
@@ -91,7 +91,9 @@ subindo a alterações
 	git commit -m "initial commit"
 	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
 	
-	
+
+<br><br>,
+
 criando branch no GitLab com GitHub DeskTop
 
 	GitHub desktop > file > clone repository
