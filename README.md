@@ -96,9 +96,9 @@ criando a branch no GitLab
 
 	GitHub desktop > file > clone repository
 	GitLab > copiar url https > colar no clone repository do GitHub Desktop
-	GitHub Desktop > Current Branch > Dev
-	GitHub Desktop > Current Branch > New Branch > name > select dev > Public branch >
-	changes > commiit > Public branch >  merge request > change branch dev > assine and review > create merge request > 
+	GitHub Desktop > New Branch > name > select dev > create branch >
+	Github Desktop > changes > commiit > Public branch >
+	GitLab > merge request > change branch dev > assine and review > create merge request
 	
 	
 	
