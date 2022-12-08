@@ -92,7 +92,7 @@ subindo a alterações
 	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
 	
 	
-criando a branch no GitLab
+criando branch no GitLab com GitHub DeskTop
 
 	GitHub desktop > file > clone repository
 	GitLab > copiar url https > colar no clone repository do GitHub Desktop
