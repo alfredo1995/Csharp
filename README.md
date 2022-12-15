@@ -92,7 +92,7 @@ subindo a alterações
 	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
 	
 
-<br><br>,
+<br><br>
 
 criando branch no GitLab com GitHub DeskTop
 
