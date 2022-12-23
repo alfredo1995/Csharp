@@ -102,5 +102,10 @@ criando branch no GitLab com GitHub DeskTop
 	Github Desktop > changes > commiit > Public branch > feature/322/AG-NomeDaHistoria
 	GitLab > merge request > change branch dev > assine and review > create merge request
 	
+Pegando atualização da dev atual apos criado a branch baseado na dev antiga
+
+	github desktop > menu branch > merch into current branch >opne visual code > acepter current branch
+
+	
 	
 	
