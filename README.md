@@ -99,7 +99,7 @@ criando branch no GitLab com GitHub DeskTop
 	GitHub desktop > file > clone repository
 	GitLab > copiar url https > colar no clone repository do GitHub Desktop
 	GitHub Desktop > New Branch > name > select dev > create branch >
-	Github Desktop > changes > commiit > Public branch >
+	Github Desktop > changes > commiit > Public branch > feature/322/AG-NomeDaHistoria
 	GitLab > merge request > change branch dev > assine and review > create merge request
 	
 	
