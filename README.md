@@ -104,7 +104,8 @@ criando branch no GitLab com GitHub DeskTop
 	
 Pegando atualização da dev atual apos criado a branch baseado na dev antiga
 
-	github desktop > menu branch > merch into current branch >opne visual code > acepter current branch
+	github desktop > minha branch criada > menu branch > merch into current branch > selecione a dev >
+	solucionando confiltro no merge > open in visual studio code > acepter current branch
 
 	
 	
