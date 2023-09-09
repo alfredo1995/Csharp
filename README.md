@@ -12,7 +12,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
 
       5) Classes & Métodos - Aqui inicia a nossa jornada pela Orientação a Objetos 
 
-      6) Coleções - Estruturas de dados serão abordadas: array, listas, filas, pilhas, dicionários 
+      6) Coleções - Estruturas de dados serão abordadas: array, listas, filas, pilhas, dicionários  
 
       7) Orientação a Objetos - Os pilares das Orientação a Objetos e como aplicar na prática; 
 
