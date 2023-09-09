@@ -7,7 +7,7 @@ Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, D
       2) Configuração do Ambiente - passos necessários para configurar o computador para executar o C#
 
       3) Fundamentos - Tem por objetivo estabelecer bases sólidas sobre a linguagem;
-    
+     
       4) Estruturas de Controle - Aqui aprenderemos a controlar o fluxo da aplicação;
 
       5) Classes & Métodos - Aqui inicia a nossa jornada pela Orientação a Objetos 
