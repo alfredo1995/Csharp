@@ -1,30 +1,30 @@
-Capaz de desenvolver programas com a linguagem C#
+Able to develop programs with the C# language
 
-Algoritmo, Estrutura de Dados, Fundamentos, OO, Coleções, Lambdas, Generics, Dynamics, LINQ e vários recursos
+Algorithm, Data Structure, Fundamentals, OO, Collections, Lambdas, Generics, Dynamics, LINQ and various resources
 
-      1) Introdução - algoritmos, estrutura de dados e introdução ao .NET framework;  
+       1) Introduction - algorithms, data structure and introduction to the .NET framework;
 
-      2) Configuração do Ambiente - passos necessários para configurar o computador para executar o C#
+       2) Environment Configuration - steps necessary to configure the computer to run C#
 
-      3) Fundamentos - Tem por objetivo estabelecer bases sólidas sobre a linguagem;
+       3) Fundamentals - Aims to establish solid foundations on the language;
      
-      4) Estruturas de Controle - Aqui aprenderemos a controlar o fluxo da aplicação;
+       4) Control Structures - Here we will learn how to control the application flow;
 
-      5) Classes & Métodos - Aqui inicia a nossa jornada pela Orientação a Objetos 
+       5) Classes & Methods - Here begins our journey through Object Orientation
 
-      6) Coleções - Estruturas de dados serão abordadas: array, listas, filas, pilhas, dicionários  
+       6) Collections - Data structures will be covered: array, lists, queues, stacks, dictionaries
 
-      7) Orientação a Objetos - Os pilares das Orientação a Objetos e como aplicar na prática; 
+       7) Object Orientation - The pillars of Object Orientation and how to apply it in practice;
 
-      8) Métodos e Funções - C# tb suporte recursos do mundo do funcional, funções, lambdas e métodos
+       8) Methods and Functions - C# also supports resources from the functional world, functions, lambdas and methods
     
-      9) Exceções - Exceções e as técnicas de tratamento de erro
+       9) Exceptions - Exceptions and error handling techniques
  
-     10) Tópicos Avançados - Generics, LINQ, Dynamic, Nullables e etc;   
+      10) Advanced Topics - Generics, LINQ, Dynamic, Nullables, etc.;
       
 <br><br>
  
-Criando um repositorio no GitHub
+Creating a repository on GitHub
 
 	- git init
 	- git status
@@ -34,7 +34,7 @@ Criando um repositorio no GitHub
 	- git remote add origin https://github.com/alfredo1995/fdasd.git
 	- git push -u origin main
 	       
-Subindo alterações na branch de um repositório existente no github
+Uploading changes to the branch of an existing repository on github
 
 	- git init                                                     ->  iniciar project no git
 	- git status                                                   ->  ver alterações na branch
@@ -42,7 +42,7 @@ Subindo alterações na branch de um repositório existente no github
 	- git commit -m "descriçãodocommit"                            ->  descrever o commit
 	- git push -f                                                  ->  forçar envio pro git 
 
-Comandos GIT's utilizados frequentemente
+Frequently used GIT commands
 
 	- git config --global user.name "alfredo1995"  	      	      -> configura o nome do usuario git
 	- git config --global user.email "alfredogomes1995@gmail.com" -> configura email do usuario git
@@ -72,15 +72,15 @@ Comandos GIT's utilizados frequentemente
 
 <br><br>
 
-criando a branch no Azure DevOps com GitBash
+creating the branch in Azure DevOps with GitBash
 
 	Repos > New Branch 
 	feature/AG/ID-NomeDaHistoria
 	basead on Develop
 	user story ID 
 		
-puxando a branch
-	
+pulling the branch
+
 	Selecionei a feature no visual studio e o code
 	remotes > selecionar a branch criada feature/AG/ID-NomeDaHistoria
 	
@@ -89,8 +89,8 @@ puxando a branch
 	git pull
 	git checkout -b feature/AG/322-NomeDaHistoria
 	
-subindo a alterações
-	
+rising to changes
+
 	git fetch 
 	git status
 	git add .
@@ -100,7 +100,7 @@ subindo a alterações
 
 <br><br>
 
-criando branch no GitLab com GitHub DeskTop
+creating branch in GitLab with GitHub DeskTop
 
 	GitHub desktop > file > clone repository
 	GitLab > copiar url https > colar no clone repository do GitHub Desktop
@@ -108,7 +108,7 @@ criando branch no GitLab com GitHub DeskTop
 	Github Desktop > changes > commiit > Public branch > feature/322/AG-NomeDaHistoria
 	GitLab > merge request > change branch dev > assine and review > create merge request
 	
-Pegando atualização da dev atual apos criado a branch baseado na dev antiga
+Getting updates from the current dev after creating a branch based on the old dev
 
 	github desktop > minha branch criada > menu branch > merch into current branch > selecione a dev >
 	solucionando confiltro no merge > open in visual studio code > acepter current branch
