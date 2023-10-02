@@ -1,4 +1,6 @@
-Able to develop programs with the C# language (Algorithm, Data Structure, Fundamentals, OO, Collections, Lambdas, Generics, Dynamics, LINQ and various resources).
+Able to develop programs with the C# language 
+
+Algorithm, Data Structure, Fundamentals, OO, Collections, Lambdas, Generics, Dynamics, LINQ and various resources.
 
        1) Introduction - algorithms, data structure and introduction to the .NET framework;
 
