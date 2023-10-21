@@ -1,0 +1,400 @@
+SQLite Unity
+
+1°) Criar repositorio do projeto e abrir a pasta no Unity Hub
+
+	GitHub > New Repository > Add .gitgnore > Unity 
+	
+2°) Criar estrutura de pastas de plugins dentro da pasta Assets no projeto
+
+	Assets  > new folder > Plugins 
+	plugins > new folder > SQLite
+	SQLite  > new folder > x64
+	SQLite  > new folder > x86
+	SQLite  > new folder > Android
+	
+	Android > new folder > x86
+	Android > new folder > arm64-v8a
+	Android > new folder > armeabi-v7a
+
+3°) Fazer download do SQLite DLLS e incluir dentro das pastas estruturadas anteriomente	
+
+	SQLite Home Page > Download > Precompiled Binaries for Windows > sqlite-dll-win64-x64-3430000.zip
+	SQLite Home Page > Download > Precompiled Binaries for Windows > sqlite-dll-win32-x86-3430000.zip
+
+	arrastar a dll x64 para dentro da estrutura de pasta  =	SQLite  > new folder > x64
+	arrastar a dll x86 para dentro da estrutura de pasta  =	SQLite  > new folder > x86
+
+	cofigurar a dll x64 > Desmarcar Any Plataform > Marcar apenas a versão windows x64 > cpu > x64
+	cofigurar a dll x86 > Desmarcar Any Plataform > Marcar apenas a versão windows x86 > cpu > x86
+
+	
+4°) Download do Souce Code do SQLite e SKD do Android 
+
+	SQLite Home Page > Download > Source Code > sqlite-amalgamation-3430000.zip
+	Android NDK > Download do NDK > Windows x64.zip
+
+5°) Criar uma pasta para executar o ndk builder
+
+	Criar pasta no disco C: > android_ndk_sqlite_unity > jni > include
+
+	abrir os arquivos do sql baixado >  sqlite-amalgamation-3430000.zip
+
+	arquivos shell.c e sqlite3.c       > arrastar para dentro da pasta   > jni
+	arquivos sqlite3.h e sqlite3ext3h  > arrastar para dentro da pasta   > include
+
+	dentro da pasta jni > criar arquivo > ndk > android.mk ou arquivo do tipo .makefile
+
+
+6°) Dentro do arquivo android.mk executar o codigo conderando como os arquivos devem serrem compilados 
+
+	LOCAL_PATH := $(call my-dir)
+
+	include $(CLEAR_VARS)
+
+	LOCAL_LDLIBS := -llog
+
+	LOCAL_MODULE := sqlite3
+	LOCAL_SRC_FILES := sqlite3.c
+
+	include $(BUILD_SHARED_LIBRARY)
+
+7°) Colocando o android ndk na varievel de ambiente path
+	
+	//copiar a rota da da pasta do android-ndk baixado para colar no path
+
+	variaveis de ambiente > path > novo > C:\android-ndk-r25c-windows
+
+
+8°) Abrir o prompt de comando no modo admistrador para colocar o diretorio apontando para a pasta jni e executar o ndk-build
+
+	acessar o diretorio C:\android_ndk_sqlite_unity\jni (cd) avança (cd..) retrocede
+	
+	C:\Users\7> cd C:\android_ndk_sqlite_unity\jni (acessar o Users e não O System
+
+	C:\Users\7> cd C:\android_ndk_sqlite_unity\jni   >  ndk-build
+
+	
+9°) Copiar a pasta para dentro do projeto 
+
+	copiar as 3 pastas que acabaram de serem geradas pelo ndk-builder > arm64-v8a - armeabi-v7a - x86
+	colar essas pastar no projeto > Assets > Plugis > SQLite > Android > colar aqui
+
+	desmarcar any plataforma para cada dll > manter somente a plataforma android 
+	marca em select plataform for plugin > e cpu correspondendo ao tipo da dll ( x64, am64 )
+
+	configurar cada libsqlite3 para a plataforma especifica ( select plataforms for pulgin ) 
+	
+	android > arm64-v8a > libsqlite3 > desmarcar any platarforma > marca apenas a caixa android > cpu > ARM64
+	android > ameabi-v7a> libsqlite3 > desmarcar any platarforma > marca apenas a caixa android > cpu > ARMv7
+	android > x86 > libsqlite3 > desmarcar any platarforma > marca apenas a caixa android > cpu > X86
+	
+10°) Tornar as bibliotes compartiveis com IOS
+
+	Build Setting > Player Setting > Playser > Other Setting > API Compartibli level > .NET Standard 
+
+
+11°) Adicionar DLL no mono SQLite
+
+	pastar de instalação da versao da unity
+	
+	Arquivos e programas > Unity Version > Hub > Editor > Data > Mono > lib > mono > 2.0 > Mono.Data.SQLite e Mono.Data.SQLite.Client
+
+	colocar os dois arquivos Mono.Data.SQLite e Mono.Data.SQLite.Client para dentro da pasta plugins no editor da unity
+
+12°) Criação do banco de dados SQLite 
+
+	editor da unity > assets > new folder > scripts > criar o script > DataBaseBuild.cs
+
+
+	public class DataBaseBuilder : MonoBehaviour
+	{
+		private void Awake()
+		{
+			using (var con = new SqliteConnection("Data source = TesteDB.db"))
+			{
+				con.Open();
+			}
+		}
+	}
+
+
+12°) Criar um gameObject vazio
+
+	gameObject > DataBaseBuilder > anexar script > DataBaseBuilder.cs 
+
+	*arquivo do banco foi criado na raiz do diretorio C:\Users\7\Desktop\sqlite\sqlite-unity
+
+
+13°) Criando a conexão com Database 
+
+	* criar um membro na class para dizer qual o nome do banco de dados 
+	* criar um string de conexão que sempre aponte para o Database
+	* encapusular a propriedade para sempre retornar um nova sqlite conect configura para o Database (protected) 
+	* connection > retornando um new sqliteConeection passando a string de conexao, colocando a variavel DadabaseName
+	* especificar o diretorio do banco de dados, criando outra string dababasePath
+
+	* poseteriaomente configurar o databasePath de acordo com o diretorio que queremos salvar 
+
+public class DatabaseBuild : MonoBehaviour
+
+{
+    public string DatabaseName;
+    protected string databasePath;
+    protected SqliteConnection Connection => new SqliteConnection($"Data Source = {this.databasePath};");
+
+    private void Awake()
+    {
+        using (var con = new SqliteConnection("Data source = TesteDB.db"))
+        {
+            con.Open();
+        }
+    }
+}
+
+
+14°) Criando o database via codigo 
+
+using System.IO;
+
+public class DatabaseBuild : MonoBehaviour
+
+{
+    public string DatabaseName;
+    protected string databasePath;
+    protected SqliteConnection Connection => new SqliteConnection($"Data Source = {this.databasePath};");
+
+    private void Awake()
+    {
+        if (string.IsNullOrEmpty(this.DatabaseName))
+        {
+            Debug.LogError("Database name is empty!");
+            return;
+        }
+
+        CreateDatabaseFileIfNotExists();
+    }
+
+    private void CreateDatabaseFileIfNotExists()
+    {
+        this.databasePath = Path.Combine(Application.persistentDataPath, this.DatabaseName);
+
+        if (File.Exists(this.databasePath))
+        {
+            SqliteConnection.CreateFile(this.databasePath);
+            Debug.Log($"Database path: {this.databasePath}");
+        }
+    }
+}	
+
+
+15°) Voltar na unity editor e informar o nome do banco 
+
+	GameObjct > DataBaseBuilder > Database Name = GamesCode.db
+
+
+16°) Comitando o projeto no Github 
+
+	project setting > editor > version control > visible meta file 
+	project setting > editor > asset serelization > mode > force text
+
+	ir na pasta raiz do projeto e fazer o commit para o diretorio criado 
+
+
+
+
+
+public class DatabaseBuild : MonoBehaviour
+{
+    // O nome do banco de dados SQLite
+    public string DatabaseName;
+
+    // O caminho completo para o banco de dados
+    protected string databasePath;
+
+    // Propriedade para criar uma nova conexão SQLite
+    protected SqliteConnection Connection => new SqliteConnection($"Data Source = {this.databasePath};");
+
+    private void Awake()
+    {
+        // Verifica se o nome do banco de dados está vazio ou nulo
+        if (string.IsNullOrEmpty(this.DatabaseName))
+        {
+            Debug.LogError("Database name is empty!");
+            return;
+        }
+
+        // Chama a função para criar o arquivo do banco de dados, se ele não existir
+        CreateDatabaseFileIfNotExists();
+    }
+
+    private void CreateDatabaseFileIfNotExists()
+    {
+        // Define o caminho completo do banco de dados com base no diretório persistente do aplicativo e no nome do banco de dados
+        this.databasePath = Path.Combine(Application.persistentDataPath, this.DatabaseName);
+
+        // Verifica se o arquivo do banco de dados já existe
+        if (File.Exists(this.databasePath))
+        {
+            // Se o arquivo não existir, cria um novo arquivo de banco de dados vazio no caminho especificado
+            SqliteConnection.CreateFile(this.databasePath);
+            
+            // Exibe uma mensagem de log informando o caminho do banco de dados criado
+            Debug.Log($"Database path: {this.databasePath}");
+        }
+    }
+}
+
+//ao executar, sera gerado um arquivo de criação do banco de dados
+
+Este código é uma classe chamada DatabaseBuild que lida com a criação de um banco de dados SQLite.
+Ele verifica se o nome do banco de dados não está vazio, define o caminho para o banco de dados no diretório persistente do aplicativo e,
+em seguida, cria um arquivo de banco de dados vazio se ele ainda não existir. 
+O caminho do banco de dados criado é registrado no console de depuração
+
+
+17°) Criando StreamingAssets 
+
+	*criar uma pasta StreamingAssets  > pegar e arrastar o arquivo de criação do banco de dados
+
+
+18°) Lendo de StreamingAssets (Editor, WP8, UWP, OSX, IOS)
+
+
+	//Comentar a chamada da função CreateDatabaseFileIfNotExists(); no metodo awake
+	//criar metodo CopyDatabaseFileIfNotExists()
+
+
+	private void CopyDatabaseFileIfNotExists()
+	{
+		this.databasePath = Path.Combine(Application.persistenDataPath, this.DatabaseName);
+
+		if(File.Exist(this.databasePath))
+			return;
+
+	var originalDatabasePath = string.Empty;
+
+	#if UNITY_EDITOR || UNITY_WP8 || UNITY_WINRT
+
+		originalDatabasePath = Path.Combine(Application.streamingAssetsPath, this.DatabaseName);
+
+		File.Copy(originDatabasePath, this.databasePath); //remover quando criar um var bool para controle
+
+	#elif UNITY_STANDALONE_OS
+
+		originalDatabasePath = Path.Combine(Application.dataPath, "/Resources/Data/StreamingAssets/", this.DatabaseName);
+
+		File.Copy(originDatabasePath, this.databasePath); //remover quando criar um var bool para controle
+	}
+
+	#elif UNITY_IOS
+
+		originalDatabasePath = Path.Combine(Application.dataPath, "RAW", this.DatabaseName);
+
+		File.Copy(originDatabasePath, this.databasePath); //remover quando criar um var bool para controle
+	}
+
+
+19°) Lendo StreamingAssets (Android)
+
+	#elif UNITY_ANDROID
+
+	originalDatabasePath = "jar:file://" + Application.dataPath + "!/assets" + this.DatabaseName);
+	StartCoroutine(GetInternalFileAndroid(originalDatabasePath));
+
+	File.Copy(originDatabasePath, this.databasePath); 
+
+	#endif
+	
+		
+	}
+
+
+	private IEnumerator GetInternalFileAndroid(string path)
+	{
+		var request = UnityWebRequest.Get(path);
+		yield return request.SendWebRequest();
+
+		if(request.isHttpError || request.isNetworkError)
+		{
+			Debug.LogError($"Error reading android file!: {request.error}");
+		}
+		else
+		{
+			File.WriteAllBytes(this.databasePath, request.dowloadHandler.data);
+			Debug.Log("File copied!");
+		}
+	}
+
+
+
+
+
+20°) Criando uma variavel boleana para remover o ( File.Copy(originDatabasePath, this.databasePath); ) de cada #
+
+
+	var isAndroid = false;
+
+
+	#elif UNITY_ANDROID
+	isAndroid = true; 
+	#endif
+
+	if(!isAndroid)
+
+
+
+21°) Criando tabela no database
+
+
+	protected void CreateTable()
+	{
+		using (var conn = Connetion)
+		{
+			var commandText = $"CREATE TABLE TabelaTeste" +
+			$" Id INTEGER PRIMARY KEY, " +
+			$" Description TEXT NOT NULL, " +
+			$" Value REAL" +
+			$");";
+
+			conn.Open();
+
+			using (var command = conne.CreateCommand())
+			{
+				command.CommandText = commandText;
+				command.ExecuteNonQuery();
+				Degub.Log("Command");
+		}
+	}
+
+
+    //chamar o metodo CreateTable 
+
+    private void Awake()
+    {
+        if (string.IsNullOrEmpty(this.DatabaseName))
+        {
+            Debug.LogError("Database name is empty!");
+            return;
+        }
+	
+	try
+	{
+       		 CreateTable();
+	}
+	cath (Exeption e)
+	{
+		Debug.LogError(e.Message);
+	}
+	
+    }
+
+
+	
+
+22°) Usando SQLiteStudi para visualizar o database
+
+	- Download SQLIte Studio
+	
+	
+
+	
