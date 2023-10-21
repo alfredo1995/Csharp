@@ -14,3 +14,5 @@ C:\Users\7belo\source\repos\CursoCSharp\CursoCSharp\obj\Debug\net5.0\CursoCSharp
 C:\Users\7belo\source\repos\CursoCSharp\CursoCSharp\obj\Debug\net5.0\ref\CursoCSharp.dll
 C:\Users\7belo\source\repos\CursoCSharp\CursoCSharp\obj\Debug\net5.0\CursoCSharp.pdb
 C:\Users\7belo\source\repos\CursoCSharp\CursoCSharp\obj\Debug\net5.0\CursoCSharp.genruntimeconfig.cache
+C:\Users\7\Downloads\Nova pasta\csharp\CSharp\obj\Debug\net5.0\CursoCSharp.dll
+C:\Users\7\Downloads\Nova pasta\csharp\CSharp\obj\Debug\net5.0\CursoCSharp.pdb

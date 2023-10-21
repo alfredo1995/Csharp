@@ -1,0 +1,47 @@
+<br>
+
+Hosting game on github 
+
+    
+    1) Edit > Projetc Settings > Player > Resolutions and Representation > Check the box > Run in Background
+    
+    2) Edit > Projetc Settings > Player > Publishing Settings > Compression format > Check the box > Dissabled
+    
+    3) File > Build Settings > Build and Run > Create a new folder > Select the folder to run the build
+    
+    4) Github > New Repostory > Dar o nome do Projeto > Create Repository > Uploading and existing file
+     
+    5) Acessar a nova pasta criada no passo 3 > Oppose all files and drag to the > Uploading and existing file > commit changes
+    
+    6> config > page > branch none > trocar para main > save
+    
+    
+Hosting game on Itch.io
+       
+    
+    1) Edit > Projetc Settings > Player > Resolutions and Representation > Check the box > Run in Background
+    
+    2) Edit > Projetc Settings > Player > Publishing Settings > Compression format > marcar a caixa > Dissabled
+    
+    3) Unity 3.0 > Intal > Version da unity do jogo >  Add modulos > webglbuild support
+    
+    4) File > Build Settings > Build and Run > Create a new folder > Select the folder to run the build
+    
+    5) acessar o site https://itch.io > Perfil > Upload new Project > Name the project > Kind of project > Select > HTML you have zip
+    
+    6 ) Upload files > Access the newly created folder > Select all files > button Right > send to > compress files into for .Zip 
+    
+    7 > After the upload > Select the option > This file will be played in the browser  >  opcional mudar a Emedend point ( screen resolution )
+     
+<br>
+
+Build and run for android
+
+    Download > Unity Remote 5  > Enable Mobile Developer mode
+
+
+    Edit > Project Setting > Player > Publishing Settings > KeyStore Manager > Create New > AnyWhere > Apk.Keytore Password
+
+    Edit > Project Setting > Player > Publishing Settings > Custom Keystore > Create New > Password > Proect Key > Alias
+    
+    File > Build Setting > Android > Rund drive > Select You Phone > Build and Run > Selecet You Key;
