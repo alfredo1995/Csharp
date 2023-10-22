@@ -39,7 +39,7 @@ Uploading changes to the branch of an existing repository on github
 	- git init                                                     ->  start project in git
 	- git status                                                   ->  see branch changes
 	- git add .  ou git add --all                                  ->  adding changes
-	- git commit -m "descriçãodocommit"                            ->  describe the commit
+	- git commit -m "describecommit"                            ->  describe the commit
 	- git push -f                                                  ->  force push to git
 
 Frequently used GIT commands
