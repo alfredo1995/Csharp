@@ -61,7 +61,7 @@ Frequently used GIT commands
 	- cd NomeDaPasta                                              -> cd access the folder
 	- .. 							      -> colon back to folder
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
-    	- prop, aperta duas vezes tab                                 -> create a class attribute
+        - prop, aperta duas vezes tab                                 -> create a class attribute
 	- shift + windows + s                                         -> print on the screen in the form of a cutout
 	- ctrl + k + d  ou shift + alt + f                            -> format the indentation vs code e vs
 	- ctrl + k + c                                                -> comment visual studio and code 
