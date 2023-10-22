@@ -46,19 +46,19 @@ Frequently used GIT commands
 
 	- git config --global user.name "alfredo1995"  	      	      -> configure git username
 	- git config --global user.email "alfredogomes1995@gmail.com" -> configure git user email
-	- git clone <https://nome-do-link>                            -> download existing source code      
+	- git clone <https://name-do-link>                            -> download existing source code      
 	- git branch -M main                                          -> Create project branches
 	- git remote add origin https://github.com/alfredo1995/2.git  -> where is the github access path
 	- git push -u origin main                                     -> confirm the push
 	- git branch or git branch --list                             -> to see the branches
-	- git branch -d <nome-da-branch>                              -> delete the branches
-	- git checkout <nome-da-branch>                               -> switch from one branch to another
-	- git checkout -b <nome-da-branch>                            -> create and switch to a branch
+	- git branch -d <name-branch>                                 -> delete the branches
+	- git checkout <name-branch>                                  -> switch from one branch to another
+	- git checkout -b <name-branch>                               -> create and switch to a branch
 	- git reset --hard                                            -> undo branch changes
 	- git add -A                                                  -> to add everything at once
 	- git pull <remote>                                           -> get update remote repository
-	- git merge <nome-da-branch>                                  -> merge branches
-	- cd NomeDaPasta                                              -> cd access the folder
+	- git merge <name-branch>                                     -> merge branches
+	- cd FolderName                                               -> cd access the folder
 	- .. 							      -> colon back to folder
 	- shift + windows + s                                         -> print on the screen in the form of a cutout
 	- ctrl + k + d  ou shift + alt + f                            -> format the indentation vs code e vs
