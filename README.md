@@ -60,7 +60,6 @@ Frequently used GIT commands
 	- git merge <nome-da-branch>                                  -> merge branches
 	- cd NomeDaPasta                                              -> cd access the folder
 	- .. 							      -> colon back to folder
-        - prop - give two tab                                         -> create a class attribute
 	- shift + windows + s                                         -> print on the screen in the form of a cutout
 	- ctrl + k + d  ou shift + alt + f                            -> format the indentation vs code e vs
 	- ctrl + k + c                                                -> comment visual studio and code 
