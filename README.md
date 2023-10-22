@@ -36,37 +36,37 @@ Creating a repository on GitHub
 	       
 Uploading changes to the branch of an existing repository on github
 
-	- git init                                                     ->  iniciar project no git
-	- git status                                                   ->  ver alterações na branch
-	- git add .  ou git add --all                                  ->  adicionando alterações
-	- git commit -m "descriçãodocommit"                            ->  descrever o commit
-	- git push -f                                                  ->  forçar envio pro git 
+	- git init                                                     ->  start project in git
+	- git status                                                   ->  see branch changes
+	- git add .  ou git add --all                                  ->  adding changes
+	- git commit -m "descriçãodocommit"                            ->  describe the commit
+	- git push -f                                                  ->  force push to git
 
 Frequently used GIT commands
 
-	- git config --global user.name "alfredo1995"  	      	      -> configura o nome do usuario git
-	- git config --global user.email "alfredogomes1995@gmail.com" -> configura email do usuario git
-	- git clone <https://nome-do-link>                            -> baixar código-fonte existente	      
-	- git branch -M main                                          -> Criar branches do projeto
-	- git remote add origin https://github.com/alfredo1995/2.git  -> onde e o caminho de acesso github
-	- git push -u origin main                                     -> confirma o push
-	- git branch or git branch --list                             -> para ver as branches
-	- git branch -d <nome-da-branch>                              -> deletar as branches
-	- git checkout <nome-da-branch>                               -> alternar de um branch para outro
-	- git checkout -b <nome-da-branch>                            -> criar e trocar para um branch
-	- git reset --hard                                            -> desfazer alterações branch
-	- git add -A                                                  -> para adicionar tudo de uma vez
-	- git pull <remote>                                           -> obter update repositório remoto
-	- git merge <nome-da-branch>                                  -> mesclar as branches
-	- cd NomeDaPasta                                              -> cd acessa a pasta
-	- .. 							      -> dois pontos volta a pasta
+	- git config --global user.name "alfredo1995"  	      	      -> configure git username
+	- git config --global user.email "alfredogomes1995@gmail.com" -> configure git user email
+	- git clone <https://nome-do-link>                            -> download existing source code      
+	- git branch -M main                                          -> Create project branches
+	- git remote add origin https://github.com/alfredo1995/2.git  -> where is the github access path
+	- git push -u origin main                                     -> confirm the push
+	- git branch or git branch --list                             -> to see the branches
+	- git branch -d <nome-da-branch>                              -> delete the branches
+	- git checkout <nome-da-branch>                               -> switch from one branch to another
+	- git checkout -b <nome-da-branch>                            -> create and switch to a branch
+	- git reset --hard                                            -> undo branch changes
+	- git add -A                                                  -> to add everything at once
+	- git pull <remote>                                           -> get update remote repository
+	- git merge <nome-da-branch>                                  -> merge branches
+	- cd NomeDaPasta                                              -> cd access the folder
+	- .. 							      -> colon back to folder
 	- selecionar varios para alterar tudo vs code                 -> CTRL + D
-    	- prop, aperta duas vezes tab                                 -> cria um atributo de class
-	- shift + windows + s                                         -> print na tela em forma de recorte 
-	- ctrl + k + d  ou shift + alt + f                            -> formata a indentação vs code e vs
-	- ctrl + k + c                                                -> comentar visual studio e code  
-	- ctrl + k + u                                                -> descomentar visual studio e code  
-	- ctrl + shift + a ou shift + alt + a                         -> comentar e descomentar visual studio e code  
+    	- prop, aperta duas vezes tab                                 -> create a class attribute
+	- shift + windows + s                                         -> print on the screen in the form of a cutout
+	- ctrl + k + d  ou shift + alt + f                            -> format the indentation vs code e vs
+	- ctrl + k + c                                                -> comment visual studio and code 
+	- ctrl + k + u                                                -> uncomment visual studio and code
+	- ctrl + shift + a ou shift + alt + a                         -> comment and uncomment visual studio and code
 
 
 
