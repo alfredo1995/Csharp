@@ -14,7 +14,7 @@ Algorithm, Data Structure, Fundamentals, OO, Collections, Lambdas, Generics, Dyn
 
        6) Collections - Data structures will be covered: array, lists, queues, stacks, dictionaries
 
-       7) Object Orientation - The pillars of Object Orientation and how to apply it in practice;
+       7) Object Orientation - The pillars of Object Orientation and how to apply it in practice; 
 
        8) Methods and Functions - C# also supports resources from the functional world, functions, lambdas and methods
     
