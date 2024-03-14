@@ -111,6 +111,16 @@ Getting updates from the current dev after creating a branch based on the old de
 	github desktop > minha branch criada > menu branch > merch into current branch > selecione a dev >
 	solucionando confiltro no merge > open in visual studio code > acepter current branch
 
-	
+
+ Setup Git with Git LFS for Unity
+
+	Downlaod: GIT DESKTOP and GIT LFS 
+	GitHub: Create new repository with .gitignore for unity projects
+ 	Git Desktop: Clone repository
+  	Select the folder with the files and enter with git bash 
+   	Git Bash: git lfs install
+    	Git Bash: git lfs track "*.psd" or git lfs track "*/library"
+        Git Desktop: Commit to main and Push
+   	
 	
 	
