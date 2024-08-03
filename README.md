@@ -94,7 +94,25 @@ rising to changes
 	git add .
 	git commit -m "initial commit"
 	git push,  git merge ou git push --set-upstream origin feature/AG/317-BotaoRelatorioExecel
-	
+
+change branch 
+
+	git status	"view modified files"
+	git add .       "add all files"
+
+	git commit -m "description"   "commit added changes"
+
+	git branch branchname  "create a branch"
+
+	git branch "find out which branch you are on"
+
+	git checkout branchname "switch to branch x"
+
+	git restore * "discard all changes"
+
+	git push "send commits"
+
+	git add "path" "add specific change (specify path and file in quotes)"
 
 <br><br>
 
