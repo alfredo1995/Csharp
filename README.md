@@ -9,7 +9,7 @@ Algorithm, Data Structure, Fundamentals, OO, Collections, Lambdas, Generics, Dyn
        3) Fundamentals - Aims to establish solid foundations on the language;
      
        4) Control Structures - Here we will learn how to control the application flow;
-
+ 
        5) Classes & Methods - Here begins our journey through Object Orientation
 
        6) Collections - Data structures will be covered: array, lists, queues, stacks, dictionaries
